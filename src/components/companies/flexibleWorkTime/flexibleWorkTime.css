@@ -1,0 +1,111 @@
+.body{
+    width: 100%;
+    background: #EDF2F4;
+}
+.flexible_work_time_level_two{
+    display: grid;
+    padding: 80px 0px 0px 0px;
+}
+.flexible_work_time_level_two .flexible_work_time_level_two_heading_card_parent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 30px 100px 80px 100px;
+    padding: 24px;
+    gap: 30px;
+}
+.flexible_work_time_level_two_heading_card_parent .flexible_work_time_level_two_heading_card_child{
+    padding: 24px;
+    text-align: left;
+    border-radius: 8px;
+    background-color: #FFF;
+}
+.flexible_work_time_level_two_heading_card_parent .flexible_work_time_level_two_heading_card_child img{
+    height: 40px;
+    width: 40px;
+}
+.flexible_work_time_level_two_heading_card_parent .flexible_work_time_level_two_heading_card_child h2{
+    margin: 24px 0px 0px 0px;
+    color: #333;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+}
+.flexible_work_time_level_two_heading_card_parent .flexible_work_time_level_two_heading_card_child p{
+    margin: 8px auto 0px auto;
+    color: #666666;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
+}
+
+.flexible_work_time_level_three{
+    width: 86%;
+    margin: 80px auto 0px auto;
+    padding: 60px;
+    border-radius: 8px;
+    background: #FFF;
+}
+.flexible_work_time_level_three .flexible_work_time_level_three_heading{
+    width: 56.6%;
+    color: #333;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+}
+.flexible_work_time_level_three .flexible_work_time_level_three_heading span{
+    color: #6E6E73;
+}
+.flexible_work_time_level_three .flexible_work_time_level_three_sec{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 60px auto 0px auto;
+    gap: 30px;
+}
+.flexible_work_time_level_three_sec section{
+    position: relative;
+}
+.flexible_work_time_modal_body{
+    position: relative;
+    padding: 140px 206px;
+    border-radius: 16px;
+    background: #EDF2F4;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.25);
+}
+.flexible_work_time_modal_body img:nth-child(1){
+    display: block;
+    width: 100%;
+    /* backdrop-filter: blur(20px); */
+    background: lightgray -0.746px -22.581px / 100.488% 124.522% no-repeat;
+}
+.flexible_work_time_modal_body img:nth-child(2){
+    position: absolute;
+    top: 190px; 
+    left: 250px;
+    cursor: pointer;
+}
+.flexible_work_time_modal_body .flexible_work_time_modal_body_paragraph{
+    padding: 57px 100px 80px 100px;
+    background-color: #fff;
+}
+.flexible_work_time_modal_body .flexible_work_time_modal_body_paragraph h2{
+    color: #333;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; 
+    text-align: left;
+}
+.flexible_work_time_modal_body .flexible_work_time_modal_body_paragraph p{
+    margin: 24px auto 0px auto;
+    color: #333;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
+    text-align: left;
+}

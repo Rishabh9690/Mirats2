@@ -1,0 +1,226 @@
+.product_test_body{
+    width: 100%;
+    background: #EDF2F4;
+}
+.product_test_level_two{
+    display: grid;
+    padding: 80px 0px 0px 0px;
+}
+.product_test_level_two .product_test_level_two_heading h2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+}
+.product_test_level_two .product_test_level_two_heading h2:nth-child(1){
+    color: #333;
+}
+.product_test_level_two .product_test_level_two_heading h2:nth-child(2){
+    color: #6E6E73;
+}
+.product_test_level_two .product_test_level_two_heading_card_parent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 30px 100px 80px 100px;
+    padding: 24px;
+    gap: 30px;
+}
+.product_test_level_two_heading_card_parent .product_test_level_two_heading_card_child{
+    padding: 24px;
+    text-align: left;
+    border-radius: 8px;
+    background-color: #FFF;
+}
+.product_test_level_two_heading_card_parent .product_test_level_two_heading_card_child img{
+    height: 40px;
+    width: 40px;
+}
+.product_test_level_two_heading_card_parent .product_test_level_two_heading_card_child h2{
+    margin: 24px 0px 0px 0px;
+    color: #333;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+}
+.product_test_level_two_heading_card_parent .product_test_level_two_heading_card_child p{
+    margin: 8px auto 0px auto;
+    color: #666666;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
+}
+.product_test_level_three{
+    margin: 0px auto 0px auto;
+    padding: 2px 100px; /*padding: 102px 100px;*/
+}
+
+.product_test_level_three .product_test_level_three_grid{
+    display: flex;
+    /* align-items: flex-start; */
+    /* grid-template-columns: repeat(2, 1fr); */
+    gap: 0px;
+}
+.product_test_level_three_grid .product_test_level_three_grid_text{
+    display: flex;
+    padding: 60px;
+    text-align: left;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.product_test_level_three_grid .product_test_level_three_grid_text h2{
+    align-self: flex-start;
+}
+.product_test_level_three_grid .product_test_level_three_grid_text img{
+    margin-top: auto;
+    align-self: flex-start;
+}
+.product_test_level_three .product_test_level_three_grid section{
+    width: 86%;
+    margin: 0px auto 60px auto;
+    background-color: #fff;
+}
+.product_test_level_three .product_test_level_three_grid section p{
+    width: 86%;
+    padding: 60px;
+    margin: 0px auto 60px auto;
+    text-align: left;
+    background-color: #fff;
+}
+.product_test_level_four{
+    width: 100%;
+    margin: 80px auto 0px auto;
+    padding: 60px 0px;
+    background: #FFF;
+    /* background-color: rgb(55 199 199); */
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.25);
+}
+.product_test_level_four_unordered_list .alice-carousel__prev-btn-wrapper{
+    position: absolute;
+    color: black !important;
+}
+.product_test_level_four .product_test_level_four_heading{
+    margin: 60px auto  40px auto;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+}
+.product_test_level_four .product_test_level_four_heading h2:nth-child(1){
+    color: #333;
+}
+.product_test_level_four .product_test_level_four_heading h2:nth-child(2){
+    color: #6E6E73;
+}
+.product_test_level_four .product_test_level_four_unordered_list{
+    display: flex;
+    position: relative;
+}
+.product_test_level_four .product_test_level_four_unordered_list ul{
+    gap: 40px;
+}
+.product_test_level_four_sec{
+    width: 71%;
+    display: flex;
+    margin: 24px auto 0px auto;
+    padding: 24px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+}
+.product_test_level_four_sec section:nth-child(2){
+    text-align: left; 
+    padding: 32px;
+    gap: 8px;
+}
+.product_test_level_four_sec section:nth-child(2) div h2{
+    /* margin: 32px 32px 0px 32px; */
+    color: #333;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+}
+.product_test_level_four_sec section:nth-child(2) div p{
+    /* margin: 8px auto 0px auto; */
+    color: #666;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
+}
+.product_test_level_four_sec section:nth-child(2) div h3{
+    color: #333;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; 
+}
+.product_test_level_four_sec section:nth-child(2) div ul li{
+    color: #666;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
+}
+.product_test_level_five{
+    width: 100%;
+    padding: 60px 100px;
+    align-items: center;
+    background: linear-gradient(315deg, #1F1F1F 0%, #333 100%);
+}
+.product_test_level_five p{
+    color: #F0F0F0;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+.product_test_level_five .product_test_level_five_heading h2:nth-child(1){
+    color: #F0F0F0;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+    margin-bottom: 0px;
+}
+.product_test_level_five .product_test_level_five_heading h2:nth-child(2){
+    color: #B5B5B5;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+    margin-top: 0px;
+}
+.product_test_level_five .product_test_level_five_surveys_parent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 60px auto 0px auto;
+}
+.product_test_level_five_surveys_parent .product_test_level_five_surveys_child{
+    border-radius: 8px;
+    background-color: #FFF;
+}
+.product_test_level_five_surveys_parent .product_test_level_five_surveys_child img{
+    width: 100%;
+}
+.product_test_level_five_surveys_parent .product_test_level_five_surveys_child h2{
+    color: #333;
+    margin: 24px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+    text-align: left;
+}

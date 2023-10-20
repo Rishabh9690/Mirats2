@@ -1,0 +1,52 @@
+body{
+    background: #EDF2F4;
+}
+.careers_level_two{
+    width: 70%;
+    margin: 80px auto 60px auto;
+
+}
+.careers_level_two h2{
+    color: #333;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; 
+}
+.careers_level_two p{
+    color: #666666;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; 
+}
+.careers_level_four{
+    width: 66%;
+    margin: 100px auto;
+}
+.careers_level_four h2{
+    color: #333;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+}
+.careers_level_four_faq section{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto 0px auto;
+}
+.careers_level_four_faq section h5{
+    color: #333;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+}
+.careers_level_four_faq section img{
+    width: 24px;
+    height: 24px;
+}

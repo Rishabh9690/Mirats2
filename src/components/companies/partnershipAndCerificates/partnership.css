@@ -1,0 +1,40 @@
+body{
+    background: #EDF2F4;
+}
+.partnership_and_certificates_level_two{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    margin: 80px 100px;
+    gap: 60px;
+}   
+.partnership_and_certificates_level_two_grid{
+    display: flex;
+    background-color: #F0F0F0;
+}
+.partnership_and_certificates_level_two_grid section{
+    border-radius: 8px; 
+}
+.partnership_and_certificates_level_two_grid section{
+    padding: 60px;
+    text-align: left;
+    background: #FFF;  
+}
+.partnership_and_certificates_level_two_grid section h2{
+    color: #333;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+}
+.partnership_and_certificates_level_two_grid section p{
+    color: #666666;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; 
+}
+.partnership_and_certificates_level_two_grid img{
+    margin: 84px 0px;
+    /* background-color: #F0F0F0; */
+    /* background:lightgray -0.529px 0px / 104.669% 100% no-repeat; */
+}

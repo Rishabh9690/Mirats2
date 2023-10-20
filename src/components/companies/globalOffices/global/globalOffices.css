@@ -1,0 +1,49 @@
+.global_office_body {
+    background: #EDF2F4;
+}
+.global_office_levels{
+    padding: 0px 100px;
+}
+.global_office_level_two{
+    text-align: left;
+    margin: 80px auto 60px 0px;
+}
+.global_office_level_two h2{
+    color: #333;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;/* 57.6px */
+}
+.global_office_level_two_office_parent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+    gap: 30px;
+}
+.global_office_level_two_office_parent .global_office_level_two_office_child{
+    width: 90%;
+    display: inline;
+    border-radius: 8px;
+    background: #FFF;
+    cursor: pointer;
+}
+.global_office_level_two_office_child img{
+    width: 100%;
+}
+.global_office_level_two_office_child section{
+    padding: 24px;
+}
+.global_office_level_two_office_child section h2{
+    color: #333;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+}
+.global_office_level_two_office_child section p{
+    color: #666;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; 
+}

@@ -1,0 +1,175 @@
+body{
+    background: #EDF2F4;
+}
+.offices_level_two{
+    display: flex;
+    padding: 80px 100px;
+    text-align: left;
+    justify-content: space-between;
+}
+.offices_level_two section h2{
+    color: #333;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+}
+.offices_level_two_head{
+    margin: 24px auto 8px auto;
+    color: #333;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+}
+.offices_level_two_head_timmings{
+    width: 160px;
+    margin: 24px auto 8px auto;
+    color: #333;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+}
+/* .offices_level_two_office_timmings{
+    width: 30%;
+} */
+.offices_level_three{
+    text-align: center;
+    margin: 60px auto;
+}
+.offices_level_three h2{
+    color: #333;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+}
+.offices_level_three .offices_level_three_sec{
+    display: flex;
+    margin: 60px auto;
+    gap: 30px;
+    justify-content: center;
+}
+.offices_level_three_sec section{
+    display: flex;
+}
+.offices_level_three_sec section img{
+    width: 48px;
+    height: 48px;
+    margin: auto 30px;
+    border: 10px solid white;
+    border-radius: 50%;
+}
+.offices_level_three_sec_inline p{
+    color: #666;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
+}
+.offices_level_three_sec_inline h5{
+    color: #333;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; 
+}
+.offices_level_three_address{
+    width: 45%;
+    display: flex;
+    margin: 0px auto;
+    text-align: left;
+    justify-content: center;
+}
+.offices_level_three_address img{
+    width: 48px;
+    height: 48px;
+    margin: auto 30px;
+    border: 10px solid white;
+    border-radius: 50%;
+}
+.offices_level_three_address section p{
+    color: #666;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
+}
+.offices_level_three_address section h5{
+    color: #333;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;  
+}
+.offices_level_four{
+    margin: 60px auto;
+}
+.offices_level_four h2{
+    color: #333;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+}
+.offices_level_four_sec {
+    display: flex;
+    padding: 60px 206px;
+}
+.slideing_image{
+    display: flex;
+    margin: auto;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+.offices_level_four_sec_parent{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 40px auto;
+    gap: 30px;
+}
+.offices_level_four_sec_parent_one_office{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 40px auto;
+    gap: 30px;
+}
+.offices_level_four_sec_parent .offices_level_four_sec_child{
+    width: 90%;
+    display: inline;
+    border-radius: 8px;
+    background: #FFF;
+    cursor: pointer;
+}
+.offices_level_four_sec_parent_one_office .offices_level_four_sec_child{
+    width: 90%;
+    display: inline;
+    border-radius: 8px;
+    background: #FFF;
+    cursor: pointer;
+}
+.offices_level_four_sec_child img{
+    width: 100%;
+}
+.offices_level_four_sec_child section{
+    text-align: left;
+    padding: 24px;
+}
+.offices_level_four_sec_child section h2{
+    color: #333;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+}
+.offices_level_four_sec_child section p{
+    color: #666;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; 
+}

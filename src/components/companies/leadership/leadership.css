@@ -1,0 +1,74 @@
+.leqadership_body{
+    width: 100%;
+    background: #EDF2F4;
+}
+/* .leadership_level_one{
+    padding: 60px 309px 174px 80px;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: left;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%);
+}
+.leadership_level_one h5{
+    margin: 24px auto;
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+}
+.leadership_level_one h1{
+    margin: 24px auto;
+    color: #FFF;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+.leadership_level_one p{
+    margin: 16px auto;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
+} */
+
+.leadership_levels{
+    padding: 0px 100px;
+    text-align: left;
+}
+.leadership_level_two {
+    text-align: left;
+}
+.leadership_level_two h2{
+    margin: 80px 0px 0px 0px;
+    color: #333;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+}
+.leadership_level_two .leadership_level_two_details{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.leadership_level_two_details .leadership_level_two_details_sections{
+    margin: 40px 30px 0px 0px;
+}
+.leadership_level_two_details .leadership_level_two_details_sections h2{
+    margin: 24px 0px 0px 0px ;
+    color: #333;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+}
+.leadership_level_two_details .leadership_level_two_details_sections p{
+    margin: 6px 0px 0px 0px;
+    color: #333;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; 
+}
