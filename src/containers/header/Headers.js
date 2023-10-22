@@ -19,7 +19,7 @@ const Header = () => {
     }
     const handleModalClose = () => {
         console.log("Inside the handleModalClose");
-        setModalIsOpen(false);
+        setModalIsOpen(!modalIsOpen);
         // onRequestClose
     }
 
@@ -159,7 +159,69 @@ const Header = () => {
     const handleNavigations = (e) => {
         e.preventDefault();
         console.log("Clicked");
-        
+        const id= e.currentTarget.id;
+        if (type === "services" && subType=="Qualitative Solution") {
+            if (subDivisions[id]=="Online Surveys") {
+                handleModalClose();
+                navigate("/services/onlinesurveys")
+            }
+            else if (subDivisions[id]=="DIY Surveys") {
+                handleModalClose();
+                navigate("/services/diysurveys")
+            }
+            else if (subDivisions[id]=="Global Sample Surveys") {
+                handleModalClose();
+                navigate("/services/globalsurveys")
+            }
+            else if (subDivisions[id]=="Global Quantitative Fieldwork") {
+                handleModalClose();
+                navigate("/services/globalqunatitativesurveys")
+            }
+            else if (subDivisions[id]=="End to End Sample Service") {
+                handleModalClose();
+                navigate("/services/endtoendsurveys")
+            }
+        }
+        if (type === "services" && subType=="Quantitive Solution") {
+            if (subDivisions[id]=="In-Person Qual") {
+                handleModalClose();
+                navigate("/services/inpersonalqual")
+            }
+            else if (subDivisions[id]=="Digital Qual") {
+                handleModalClose();
+                navigate("/services/digitalqual")
+            }
+            else if (subDivisions[id]=="Telephonic Qual") {
+                handleModalClose();
+                navigate("/services/telephonicqual")
+            }
+            else if (subDivisions[id]=="Global Qual Solution") {
+                handleModalClose();
+                navigate("/services/globalqual")
+            }
+        }
+        if (type === "services" && subType=="Specialist Solution") {
+            if (subDivisions[id]=="Recruitment Solution") {
+                handleModalClose();
+                navigate("/services/recruitmentservice")
+            }
+            else if (subDivisions[id]=="Consulting Solution") {
+                handleModalClose();
+                navigate("/services/consultingservice")
+            }
+            else if (subDivisions[id]=="Hybrid Research Solution") {
+                handleModalClose();
+                navigate("/services/hybridresearchservice")
+            }
+            else if (subDivisions[id]=="Product Test") {
+                handleModalClose();
+                navigate("/services/producttestservice")
+            }
+            else if (subDivisions[id]=="Transcription Services") {
+                handleModalClose();
+                navigate("/services/transcriptionservice")
+            }
+        }
     }
 
     return (
