@@ -1,11 +1,12 @@
 import React from "react";
-import banner from "../images/b2cbanner.png";
-import focusImage from "../images/focusImage.png";
-import b2cImage from "../images/b2cImage.png";
-import consumerImage from "../images/consumerImage.png";
-import healthCareimage from "../images/healthCareImage.png";
-import qualityImage from "../images/qualityImage.png";
-import esomarimage from "../images/esomarImage.png";
+import banner from "../../images/banners/b2CBanner.png";
+import focusImage from "../../images/images/resourcesImg.png";
+import resourcesImg1 from "../../images/images/resourceImg1.png";
+import resourcesImg2 from "../../images/images/resourceImg2.png";
+import resourcesImg3 from "../../images/images/resourceImg3.png";
+import resourcesImg4 from "../../images/images/resourcesImg4.png";
+import resourcesImg5 from "../../images/images/resourcesImg5.png";
+
 
 import "../resources.css";
 
@@ -27,23 +28,23 @@ const B2cAudienceBook = () => {
   ];
 
   const upcommingResources=[{
-    image: b2cImage,
+    image: resourcesImg1,
     title: "B2C Audience Book",
     text: "Learn more"
   },{
-    image: consumerImage,
+    image: resourcesImg2,
     title: "B2B Audience Book",
     text: "Learn more"
   },{
-    image: healthCareimage,
+    image: resourcesImg3,
     title: "Healthcare Audience Book",
     text: "Learn more"
   },{
-    image: qualityImage,
+    image: resourcesImg4,
     title: "Quality / Security Control Docs ",
     text: "Learn more"
   },{
-    image: esomarimage,
+    image: resourcesImg5,
     title: "Esomar 37 Answer",
     text: "Learn more"
   }]

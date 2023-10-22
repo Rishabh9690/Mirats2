@@ -1,8 +1,8 @@
 import React from "react";
-import blogimage1 from "../bloAndArticles/blogImages/blogImage1.png";
-import blogimage2 from "../bloAndArticles/blogImages/blogImage2.png";
-import blogimage3 from "../bloAndArticles/blogImages/blogImage3.png";
-import blogimage4 from "../bloAndArticles/blogImages/blogImage4.png";
+import blogimage1 from "../../images/images/blogImage1.png";
+import blogimage2 from "../../images/images/blogImage2.png";
+import blogimage3 from "../../images/images/blogImage3.png";
+import blogimage4 from "../../images/images/blogImage4.png";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import "./blogAndArticle.css";
 // import { useParams } from "react-router-dom";

@@ -1,9 +1,9 @@
 import React from "react";
-import banner from "./images/Banner.png";
-import MacerLucknow from "./images/MacerLucknow.png";
-import MiratsLucknow from "./images/MiratsLucknow.png";
-import UsOffice from "./images/UsOffice.png";
-import Atomos from "./images/Atomos.png";
+import banner from "../../../images/banners/globalOffices.png";
+import MacerLucknow from "../../../images/images/MacerLucknow.png";
+import MiratsLucknow from "../../../images/images/MiratsLucknow.png";
+import UsOffice from "../../../images/images/UsOffice.png";
+import Atomos from "../../../images/images/Atomos.png";
 
 import "./globalOffices.css";
 

@@ -1,10 +1,13 @@
 import React from "react";
+import banner from "../../images/banners/blogAndArticles.png"
 
 const BlogsAndArticles=()=>{
 
     return(
         <div className="">
-            <h1>Hello</h1>
+            <div className="">
+                <img src={banner} />
+            </div>
         </div>
     )
 }

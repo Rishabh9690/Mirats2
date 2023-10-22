@@ -39,99 +39,7 @@
     align-items: center;
     background: #FFF;
 }
-.about_us_level_four{
-    width: 100%;
-    margin: 80px auto;
-}
-.about_us_level_four .about_us_level_four_box{
-    display: inline-flex;
-    padding: 60px 48px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    border-radius: 8px;
-    background: #FFF;
-}
-.about_us_level_four_box .about_us_level_four_heading{
-    width: 70%;
-}
-.about_us_level_four_heading p{
-    color: #333;
-    text-align: center;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; 
-}
-.about_us_level_four_heading h2{
-    color: #333;
-    text-align: center;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 120%; 
-}
-.about_us_level_four_heading h2 span{
-    color: #6E6E73;
-    text-align: center;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 120%; 
-}
-.about_us_level_four_box .about_us_level_four_box_clients{
-    width: auto;
-    height: auto;
-}
-.about_us_level_four_box_clients .about_us_level_four_box_clients_row_one_parent{
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-} 
-.about_us_level_four_box_clients .about_us_level_four_box_clients_row_two_parent{
-    display: flex;
-    justify-content: space-around;
-    margin: 40px auto;
-    gap: 24px;
-} 
-.about_us_level_four_box_clients .about_us_level_four_box_clients_row_three_parent{
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-} 
-.about_us_level_five{
-    display: flex;
-    width: 100%;
-    padding: 60px 206px 62px 206px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    background: #FFF;
-}
-.about_us_level_five .about_us_level_five_list{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    cursor: pointer;
-}
-.about_us_level_five .about_us_level_five_list li{
-    list-style: none;
-}
-.about_us_level_five .about_us_level_five_list li:focus{
-    color: #0166B8;
-}
-.about_us_level_five .about_us_level_five_sec{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-}
-.about_us_level_five_sec section:nth-child(2){
-    text-align: left;
-    margin: auto;
-}
+
 .about_us_level_six_sec{
     width: 86%;
     display: flex;
@@ -159,197 +67,60 @@
     font-weight: 400;
     line-height: 140%; 
 }
-.about_us_level_seven{
-    width: 100%;
+.statistics_body{
+    width: 80%;
+    /* display: grid; */
+    /* grid-template-rows: repeat(2, 1fr); */
+    margin: 80px auto 30px auto;
+    gap: 30px;
     padding: 60px;
+    border-radius: 8px;
     background: #FFF;
-    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.25);
 }
-.about_us_level_seven .about_us_level_seven_heading p{
+.statistics_body section:nth-child(1) p{
     color: #333;
+    margin: 0;
     text-align: center;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 140%; 
 }
-.about_us_level_seven .about_us_level_seven_heading h2{
-    margin: 8px auto 0px auto;
+.statistics_body section:nth-child(1) h2{
+    margin: 0 auto 60px auto;
     color: #333;
     text-align: center;
     font-size: 48px;
     font-style: normal;
     font-weight: 600;
-    line-height: 120%; /* 57.6px */
+    line-height: 120%; 
 }
-.about_us_level_seven .about_us_level_seven_heading h2 span{
-    margin: 8px auto 0px auto;
+.statistics_body section:nth-child(1) h2 span{
     color: #6E6E73;
-    text-align: center;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 120%; /* 57.6px */
 }
-.about_us_level_eight{
-    width: 86%;
-    margin: 60px auto;
-    padding: 60px;
-    border-radius: 8px;
-    background: #FFF;
-}
-.about_us_level_eight .about_us_level_eight_heading p{
-    color: #333;
-    text-align: center;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; 
-}
-.about_us_level_eight .about_us_level_eight_heading h2{
-    margin: 8px auto 0px auto;
-    color: #333;
-    text-align: center;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 120%;
-}
-.about_us_level_eight .about_us_level_eight_heading h2 span{
-    margin: 8px auto 0px auto;
-    color: #6E6E73;
-    text-align: center;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 120%;
-}
-.about_us_level_eight .about_us_level_eight_flex {
-    /* display: flex; */
+.statistics_body_parent_map{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    margin: 60px auto;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
-.about_us_level_eight_flex .about_us_level_eight_grid_one_parent{
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    /* justify-content: space-between; */
-    gap: 30px;
-}
-.about_us_level_eight_grid_one_parent .about_us_level_eight_grid_one_child{
-    margin: auto 30px;
+.statistics_body_parent_second_child_map{
+    margin: 30px auto;
+    padding: 28px;
     border-radius: 8px 8px 0px 0px;
     background: #FAFAFA;
 }
-.about_us_level_eight_grid_one_child h2{
-    margin: 26px 26px 0px 26px;
+.statistics_body_parent_second_child_map h2{
     text-align: center;
     font-size: 48px;
     font-style: normal;
     font-weight: 600;
     line-height: 120%; 
-    background: linear-gradient(135deg, #6E33FF 18.84%, rgba(196, 69, 255, 0.40) 80.36%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
-.about_us_level_eight_grid_one_child p{
-    margin: 24px auto;
+.statistics_body_parent_second_child_map p{
     color: #666;
     text-align: center;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 140%; 
-}
-.about_us_level_eight_flex .about_us_level_eight_grid_two_parent{
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 30px;
-}
-.about_us_level_eight_grid_two_parent .about_us_level_eight_grid_two_child{
-    margin: auto 30px;
-    border-radius: 8px 8px 0px 0px;
-    background: #FAFAFA;
-}
-.about_us_level_eight_grid_two_child h2{
-    margin: 26px 26px 0px 26px;
-    text-align: center;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 120%; 
-    background: linear-gradient(135deg, #0653FD 0%, #40CDE6 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.about_us_level_eight_grid_two_child p{
-    margin: 24px auto;
-    color: #666;
-    text-align: center;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; 
-}
-.about_us_level_eight_flex .about_us_level_eight_grid_three_parent{
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 30px;
-}
-.about_us_level_eight_grid_three_parent .about_us_level_eight_grid_three_child{
-    margin: auto 30px;
-    border-radius: 8px 8px 0px 0px;
-    background: #FAFAFA;
-}
-.about_us_level_eight_grid_three_child h2{
-    margin: 26px 26px 0px 26px;
-    text-align: center;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 120%; 
-    background: linear-gradient(137deg, #0B1722 0%, rgba(114, 153, 185, 0.00) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.about_us_level_eight_grid_three_child p{
-    margin: 24px auto;
-    color: #666;
-    text-align: center;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; 
-}
-.about_us_level_nine{
-    width: 100%;
-    display: inline-flex;
-    padding: 60px 100px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    background: linear-gradient(270deg, #4333FD 0%, #0182FA 50.83%, #4333FD 100%);
-}
-.about_us_level_nine .about_us_level_nine_sec{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-.about_us_level_nine_sec section{
-    display: flex;
-    border-radius: 8px;
-    background: #FFF;
-}
-.about_us_level_nine_sec section .about_us_level_nine_sec_detail{
-    text-align: left;
-    padding: 24px;
-}
-.about_us_level_nine_sec section img{
-    background: black;
-    /* background: lightgray -35.243px -35.806px / 135.78% 134.783%; */
 }

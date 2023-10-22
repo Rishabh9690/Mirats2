@@ -1,7 +1,7 @@
 import React from "react";
-import call from "../images/call.png";
-import mail from "../images/mail.png";
-import location from "../images/location.png";
+import call from "../../images/images/call.png";
+import mail from "../../images/images/mail.png";
+import location from "../../images/images/location.png";
 
 import "./connecting.css";
 

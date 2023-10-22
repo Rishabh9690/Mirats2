@@ -1,92 +1,94 @@
-import React, { useState } from "react";
-import banner from "./images/Banner.png";
-import video from "./images/Video.png";
-import Evernote from "./images/Evernote.png";
-import Intercom from "./images/Intercom.png";
-import Miro from "./images/Miro.png";
-import Stripe from "./images/Stripe.png";
-import Adobe from "./images/Adobe.png";
-import Gitlab from "./images/Gitlab.png";
-import Pipeliner from "./images/Pipeliner.png";
-import Microsoft from "./images/Microsoft.png";
-import Pipedrive from "./images/Pipedrive.png";
-import Wix from "./images/Wix.png";
-import Okta from "./images/Okta.png";
-import Hotjar from "./images/Hotjar.png";
-import Quickbooks from "./images/Quickbooks.png";
-import imageSec from "./images/imageSec.png";
-import image1 from "./images/image1.png";
-import image2 from "./images/image2.png";
-import image_sec1 from "./images/image_sec1.png";
-import image_sec2 from "./images/image_sec2.png";
+import React from "react";
+import banner from "../../images/banners/aboutUs.png";
+import video from "../../images/images/Video.png";
+import Clients from "../../clients/Clients";
+import Listing from "../../listing/Listing";
+import listingImg2 from "../../images/images/listingImg2.png";
+import aboutUsImg1 from "../../images/images/aboutUsImg1.png";
+import aboutUsImg2 from "../../images/images/aboutUsImg2.png";
+import Carousel from "../../carousel/Carousel";
+import carouselImg1 from "../../images/images/carouselImg1.png";
+import carouselImg2 from "../../images/images/carouselImg2.png";
+import carouselImg3 from "../../images/images/carouselImg3.png";
+import carouselImg4 from "../../images/images/carouselImg4.png";
+import carouselImg5 from "../../images/images/carouselImg5.png";
+import Testimonail from "../../testimonial/Testimonial.js";
+import testimonialImg1 from "../../images/images/client1.png";
+import testimonialImg2 from "../../images/images/client2.png";
 import "./aboutUs.css";
 
 const AboutUs = () => {
-  const [data, setData] = useState({});
-  const [defaultData, setDefaultData] = useState(true);
-  const clientListOne = [Evernote, Intercom, Miro, Stripe];
-  const clientListTwo = [Adobe, Gitlab, Pipeliner, Microsoft, Pipedrive];
-  const clientlistThree = [Wix, Okta, Hotjar, Quickbooks];
 
-  const listData = [
-    {
-      heading: "Our Commitment",
-      text: `At Mirats Insights, we are committed to delivering excellence in everything we do. Our dedication to our clients, our employees, and our community drives us to continuously strive for the highest standards of quality, integrity, and innovation. At Mirats Insights, our commitment extends beyond words - it is reflected in our actions, our relationships, and the exceptional results we deliver. We invite you to join us on this journey of excellence and make a difference in the world of insights and consulting.`,
-    },
-    {
-      heading: "Our road-map",
-      text: `Feugiat egestas ut laoreet dolor lacinia eget nisi cursus. Maecenas elementum commodo tortor purus. Turpis sapien laoreet pharetra egestas morbi condimentum hendrerit neque. Auctor tincidunt elementum eleifend adipiscing purus. Cras nunc a tempor neque elit molestie malesuada diam morbi. Consequat aenean mi lacinia interdum eros ipsum dignissim amet pulvinar. Id ullamcorper at nisi venenatis urna nunc purus mi faucibus. Vitae aliquam pulvinar amet nulla rhoncus magna.`,
-    },
-    {
-      heading: "Our Beliefs",
-      text: `Feugiat egestas ut laoreet dolor lacinia eget nisi cursus. Maecenas elementum commodo tortor purus. Turpis sapien laoreet pharetra egestas morbi condimentum hendrerit neque. Auctor tincidunt elementum eleifend adipiscing purus. Cras nunc a tempor neque elit molestie malesuada diam morbi. Consequat aenean mi lacinia interdum eros ipsum dignissim amet pulvinar. Id ullamcorper at nisi venenatis urna nunc purus mi faucibus. Vitae aliquam pulvinar amet nulla rhoncus magna.`,
-    },
-    {
-      heading: "Our Stories",
-      text: `Feugiat egestas ut laoreet dolor lacinia eget nisi cursus. Maecenas elementum commodo tortor purus. Turpis sapien laoreet pharetra egestas morbi condimentum hendrerit neque. Auctor tincidunt elementum eleifend adipiscing purus. Cras nunc a tempor neque elit molestie malesuada diam morbi. Consequat aenean mi lacinia interdum eros ipsum dignissim amet pulvinar. Id ullamcorper at nisi venenatis urna nunc purus mi faucibus. Vitae aliquam pulvinar amet nulla rhoncus magna.`,
-    },
-  ];
+  const content=[{
+    heading1: "Our online survey ",
+    heading2: "made approaches",
+    lists: ["Innovative Data Collection Technologies", "Advance Sampling Technologies", "Customised Survey Design", "Comprehensive Data Analysis"],
+    sectionHeading1: "Innovative ",
+    sectionHeading2: "Data Collection Technologiess",
+    sectionText: "Mirats Insights is a forerunner in implementing innovative data collection technologies in our online surveys. We harness the power of advanced technologies, from AI-enhanced analytics to real-time data gathering methods, to ensure we capture diverse and thorough insights for our clients. Our tech-driven approach to data collection equips us with versatility and efficiency, making our market research services stand out in the industry.",
+    sectionListHeading: "Benefits of using Mirats Insights -",
+    sectionListPoints: ["Data Reliability and Precision: Our advanced data collection technologies ensure the collection of high-quality, trustworthy data.", "Scalability: The innovative technologies we use allow for scalability, meaning we can handle projects of any size or complexity effectively."],
+}]
 
-  const listDetails = (e) => {
-    e.preventDefault();
-    let id = e.currentTarget.id;
-    setData({
-      heading: listData[id].heading,
-      text: listData[id].text,
-    });
-    setDefaultData(false);
-  };
+const carouselData = [{
+  image: carouselImg1,
+  title: "Consumer Packaged Goods",
+  text: "At Mirats Insights, we have a deep understanding of the Consumer Packaged Goods (CPG) industry and its unique challenges. Our culture is rooted in delivering exceptional market research and insights to support CPG companies in making informed decisions and driving growth."
+}, {
+  image: carouselImg2,
+  title: "Financial Services",
+  text: "At Mirats Insights, we specialize in providing comprehensive market research and insights to the financial services industry. We understand the unique challenges and opportunities that financial institutions face in today's dynamic and competitive landscape."
+}, {
+  image: carouselImg3,
+  title: "Healthcare",
+  text: "At Mirats Insights, we have a deep understanding of the healthcare industry and its complex dynamics. Our culture is centered around delivering actionable market research and insights to support healthcare organizations in driving innovation, improving patient outcomes, and navigating the evolving healthcare landscape."
+}, {
+  image: carouselImg4,
+  title: "Marketing Research",
+  text: "At Mirats Insights, marketing research is at the core of our culture. We are dedicated to providing our clients with comprehensive insights that drive strategic marketing decisions and deliver measurable results. We work closely with businesses across industries to understand their unique marketing challenges and objectives."
+}, {
+  image: carouselImg5,
+  title: "Consulting",
+  text: "At Mirats Insights, we pride ourselves on our exceptional consulting services. Our team of experienced consultants brings together deep industry knowledge, analytical expertise, and a client-centric approach to deliver transformative solutions. We collaborate closely with our clients to understand their unique challenges and goals."
+}]
+const carouselInfo = ["Our Industry", "You need insights", " we have solutions."];
+const testimonialData = [{
+  image: testimonialImg1,
+  name: "Cameron Green",
+  position: "CEO & CTO, AB Technology",
+  text: "Lorem ipsum dolor sit amet consectetur. Lacinia est eu laoreet tortor. Amet venenatis semper molestie non. Sed quis auctor consectetur nisi nunc elementum felis amet eu."
+}, {
+  image: testimonialImg2,
+  name: "Alice",
+  position: "COO, AB Technology",
+  text: "Lorem ipsum dolor sit amet consectetur. Lacinia est eu laoreet tortor. Amet venenatis semper molestie non. Sed quis auctor consectetur nisi nunc elementum felis amet eu."
+}]
 
-  const gridOne = [
-    {
-      heading: "234K +",
-      text: "Experience profile",
-    },
-    {
-      heading: "23",
-      text: "Mirats Insights Product",
-    },
-  ];
-  const gridTwo = [
-    {
-      heading: "905",
-      text: "Mirats Group Employee",
-    },
-    {
-      heading: "234M +",
-      text: "Happy Customer",
-    },
-  ];
-  const gridThree = [
-    {
-      heading: "234 +",
-      text: "Conversations Analysed",
-    },
-    {
-      heading: "4",
-      text: "Mirats Parents Company",
-    },
-  ];
+const Statistic = [[{
+  num: "234K +",
+  text: "Experience Profile",
+  color: `linear-gradient(92deg, #6E33FF 19.06%, rgba(196, 69, 255, 0.40) 81.28%)`
+}, {
+  num: "23",
+  text: "Mirats Insights Product",
+  color: `linear-gradient(92deg, #6E33FF 19.06%, rgba(196, 69, 255, 0.40) 81.28%)`
+}], [{
+  num: "905",
+  text: "Mirats Group Employee",
+  color: `background: linear-gradient(92deg, #0653FD 0%, #40CDE6 100%)`
+}, {
+  num: "234M +",
+  text: "Happy Customer",
+  color: `background: linear-gradient(92deg, #0653FD 0%, #40CDE6 100%)`
+}], [{
+  num: "234 +",
+  text: "Conversations Analysed",
+  color: `background: linear-gradient(93deg, #0B1722 17.32%, rgba(114, 153, 185, 0.00) 100%)`
+}, {
+  num: "4",
+  text: "Mirats Parents Company",
+  color: `background: linear-gradient(93deg, #0B1722 17.32%, rgba(114, 153, 185, 0.00) 100%)`
+}]]
 
   return (
     <div className="about_us_body">
@@ -120,79 +122,8 @@ const AboutUs = () => {
       <div className="about_us_level_three">
         <img src={video} alt="video" />
       </div>
-      <div className="about_us_level_four">
-        <div className="about_us_level_four_box">
-          <div className="about_us_level_four_heading">
-            <p>Our clients</p>
-            <h2>
-              Trusted by over 76+ leading <span>clients worldwide </span>
-            </h2>
-          </div>
-          <div className="about_us_level_four_box_clients">
-            <div className="about_us_level_four_box_clients_row_one_parent">
-              {clientListOne.map((element, index) => {
-                return (
-                  <div className="about_us_level_four_box_clients_row_one_chlid">
-                    <img src={element} alt="clientImage" />
-                  </div>
-                );
-              })}
-            </div>
-            <div className="about_us_level_four_box_clients_row_two_parent">
-              {clientListTwo.map((element, index) => {
-                return (
-                  <div className="about_us_level_four_box_clients_row_two_chlid">
-                    <img src={element} alt="clientImage" />
-                  </div>
-                );
-              })}
-            </div>
-            <div className="about_us_level_four_box_clients_row_three_parent">
-              {clientlistThree.map((element, index) => {
-                return (
-                  <div className="about_us_level_four_box_clients_row_three_chlid">
-                    <img src={element} alt="clientImage" />
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="about_us_level_five">
-        <ul className="about_us_level_five_list">
-          <li onClick={listDetails} id={0}>
-            Our Commitment
-          </li>
-          <li onClick={listDetails} id={1}>
-            Our road-map
-          </li>
-          <li onClick={listDetails} id={2}>
-            Our Beliefs
-          </li>
-          <li onClick={listDetails} id={3}>
-            Our Stories
-          </li>
-        </ul>
-        <div className="about_us_level_five_sec">
-          <section>
-            <img src={imageSec} alt="imageSec" />
-          </section>
-          <section>
-            {defaultData ? (
-              <>
-                <h2>{listData[0].heading}</h2>
-                <p>{listData[0].text}</p>
-              </>
-            ) : (
-              <>
-                <h2>{data.heading}</h2>
-                <p>{data.text}</p>
-              </>
-            )}
-          </section>
-        </div>
-      </div>
+      <Clients />
+      <Listing content={content} image={listingImg2} />
       <div className="about_us_level_six">
         <div className="about_us_level_six_sec">
           <div className="about_us_level_six_details">
@@ -211,10 +142,10 @@ const AboutUs = () => {
               Insights, bringing change from every corner of the world.
             </p>
           </div>
-          <img src={image1} alt="image1" />
+          <img src={aboutUsImg1} alt="image1" />
         </div>
         <div className="about_us_level_six_sec">
-          <img src={image2} alt="image2" />
+          <img src={aboutUsImg2} alt="image2" />
           <div className="about_us_level_six_details">
             <h2>Our Vision</h2>
             <p>
@@ -231,88 +162,30 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className="about_us_level_seven">
-        <div className="about_us_level_seven_heading">
-          <p>Our Industry</p>
-          <h2>
-            You need insights <span>we have solutions.</span>
-          </h2>
-        </div>
-      </div>
-      <div className="about_us_level_eight">
-        <div className="about_us_level_eight_heading">
-          <p>Our Statics</p>
-          <h2>
-            numbers speak for <span>themselves</span>
-          </h2>
-        </div>
-        <div className="about_us_level_eight_flex">
-          <div className="about_us_level_eight_grid_one_parent">
-            {gridOne.map((element, index) => {
-              return (
-                <div className="about_us_level_eight_grid_one_child">
-                  <h2>{element.heading}</h2>
-                  <p>{element.text}</p>
-                </div>
-              );
-            })}
-          </div>
-          <div className="about_us_level_eight_grid_two_parent">
-            {gridTwo.map((element, index) => {
-              return (
-                <div className="about_us_level_eight_grid_two_child">
-                  <h2>{element.heading}</h2>
-                  <p>{element.text}</p>
-                </div>
-              );
-            })}
-          </div>
-          <div className="about_us_level_eight_grid_three_parent">
-            {gridThree.map((element, index) => {
-              return (
-                <div className="about_us_level_eight_grid_three_child">
-                  <h2>{element.heading}</h2>
-                  <p>{element.text}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-      <div className="about_us_level_nine">
-        <div className="about_us_level_nine_heading">
-          <p>Our Testimonial</p>
-          <h2>What our client says</h2>
-        </div>
-        <div className="about_us_level_nine_sec">
-          <section>
-            <img src={image_sec1} alt="image_sec1" />
-            <div className="about_us_level_nine_sec_detail">
-              <h2>Cameron Green</h2>
-              <h5>CEO & CTO, AB Technology</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur. Lacinia est eu laoreet
-                tortor. Amet venenatis semper molestie non. Sed quis auctor
-                consectetur nisi nunc elementum felis amet eu.
-              </p>
+      <Carousel carouselInfo={carouselInfo} carouselData={carouselData} />
+      <div className="statistics_body">
+                <section>
+                    <p>Our Statistic</p>
+                    <h2>Numbers speak for<span> themselves</span></h2>
+                </section>
+                <section className="statistics_body_parent_map">
+                    {Statistic.map((stats, index) => {
+                        return (
+                            <div key={index} className="statistics_body_parent_first_child_map">
+                                {stats.map((item, i) => {
+                                    return (
+                                        <div key={i} className="statistics_body_parent_second_child_map">
+                                            <h2 style={{ color: item.color }}>{item.num}</h2>
+                                            <p>{item.text}</p>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        )
+                    })}
+                </section>
             </div>
-          </section>
-          <section>
-            <img src={image_sec2} alt="image_sec2" />
-            <div className="about_us_level_nine_sec_detail">
-              <h2>Alice</h2>
-              <h5>COO, AB Technology</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur. Lacinia est eu laoreet
-                tortor. Amet venenatis semper molestie non. Sed quis auctor
-                consectetur nisi nunc elementum felis amet eu. Sapien pharetra
-                tempus semper euismod cursus morbi id. Arcu est ultrices
-                vulputate commodo tempus facilisis
-              </p>
-            </div>
-          </section>
-        </div>
-      </div>
+            <Testimonail testimonialData={testimonialData} />
     </div>
   );
 };

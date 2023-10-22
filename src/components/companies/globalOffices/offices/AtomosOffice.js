@@ -1,12 +1,14 @@
 import React from "react";
-import banner from  "./images/atomosBanner.png";
-import call from "./images/call.png";
-import location from "./images/mail.png";
-import MacerImg from "../global/images/MacerLucknow.png";
-import MiratsImg from "../global/images/MiratsLucknow.png";
-import mail from "./images/mail.png";
-import left from "./images/left.png";
-import right from "./images/right.png";
+import banner from  "../../../images/banners/atomos.png";
+import call from "../../../images/images/call.png";
+import location from "../../../images/images/location.png";
+import mail from "../../../images/images/mail.png";
+import MacerImg from "../../../images/images/MacerLucknow.png";
+import MiratsImg from "../../../images/images/MiratsLucknow.png";
+import UsOffice from "../../../images/images/UsOffice.png";
+import Atomos from "../../../images/images/Atomos.png";
+import left from "../../../images/images/left.png";
+import right from "../../../images/images/right.png";
 const AtomosOffice=()=>{
 
     const officeDetails=[{
@@ -72,7 +74,14 @@ const AtomosOffice=()=>{
     }
     return(
         <div className="officed_body">
-        <img src={banner} alt="banner" />
+        {/* <img src={banner} alt="banner" /> */}
+        <div className="offices_level_one">
+                <img style={{width: "90%"}} src={banner} alt="banner" />
+                <section>
+                    <p>Global Offices</p>
+                    <h2>Atomos Technologies,  <br />Mumbai, India</h2>
+                </section>                
+            </div>
         <div className="offices_level_two">
             <section>
                 <h2>Office Details</h2>

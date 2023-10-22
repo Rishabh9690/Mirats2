@@ -1,243 +1,94 @@
-import React, { useEffect, useState, useRef } from "react";
-import banner from "./images/Banner.png";
-import hand_clock from "../../services/service_img/hand_clock.svg";
-import star_chat from "../../services/service_img/star_chat.svg";
-import setting from "../../services/service_img/setting.svg";
-import image1 from "./images/image1.png";
-import image2 from "./images/image2.png";
-import image3 from "./images/image3.png";
-import image4 from "./images/iamge4.png";
-import image5 from "./images/image5.png";
-import plus from "./images/plus.png";
-import telephonic from "../images/telephonic.svg";
-import globalqual from "../images/globalqual.svg";
-import inpersonal from "../images/inpersonal.svg";
-import image_list_sec from "../recruitment/images/image_list_sec.svg";
+import React from "react";
+import banner from "../../images/banners/productTest.png";
+import Cards from "../../cards/Cards.js";
+import Listing from "../../listing/Listing.js";
+import listingImg2 from "../../images/images/listingImg2.png";
+import SlidingShow from "../../slidings/SlidingShow.js";
+import UnFlashedText from "../../unFlashedText/UnFlashedText.js";
+import unFlashImg4 from "../../images/images/unFlashImg4.png";
+import unFlashImg5 from "../../images/images/unFlashImg5.png";
+import unFlashImg6 from "../../images/images/unFlashImg6.png";
+import unFlashImg7 from "../../images/images/unFlashImg7.png";
+import unFlashImg8 from "../../images/images/unFlashImg8.png";
+import globalSurveyImg from "../../images/images/globalSurveyImg.png";
+import globalQunatativeSurveyImg from "../../images/images/globalQunatativeSurveyImg.png";
+import endToEndSurveyImg from "../../images/images/endToEndSurveyImg.png";
+import onlineSurveyImg from "../../images/images/onlineSurveyImg.png";
+
 import "./product_test.css";
 
 const ProductTestServices=()=>{
-    const [cardIcons, setCardIcons]= useState([]);
-    const [cards, setCards] = useState([]);
-    const [status1, setStattus1] = useState(true);
-    const [status2, setStattus2] = useState(true);
-    const [status3, setStattus3] = useState(true);
-    const [status4, setStattus4] = useState(true);
-    const [status5, setStattus5] = useState(true);
-    const [qualSurvey, setQualSurvey] = useState([]);
-    // const [scrollLeft, setScrollLeft] = useState(0);
-    // const listsRef = useRef(null);
-    
-    useEffect(()=>{
-        setCardIcons([hand_clock, star_chat, setting]);
-        setCards([{
-            heading: `Ideal Research Spaces`,
-            text: `mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus.
-            Urna eget bibendum feugiat congue sed. Consectetur at a enim dictum tempus. Aliquet eget lorem duis scelerisque ipsum mauris augue et. Faucibus quis venenatis ultricies dignissim tincidunt sit nulla. Consequat condimentum enim bibendum dictum. Faucibus quis venenatis `,
-        },{
-            heading: `Flexible Environments`,
-            text: ` in ornare feugiat sit tristique nibh. Neque sit ac lacinia eu. Neque consectetur enim placerat duis phasellus. Facilisis mauris nulla mi placerat. Magnis interdum nisl felis fames velit odio. Scelerisque commodo nulla vitae neque sit aliquam at commodo eu. Maecenas proin nulla mauris sit dui faucibus at vestibulum. Consequat pellentesque tincidunt neque cursus hac.`,
-        },{
-            heading: `A Consultative Approach`,
-            text: `proin nulla mauris sit dui faucibus at vestibulum. Consequat pellentesque tincidunt neque cursus hac. In vel neque blandit amet nunc urna duis. Consequat nulla feugiat lectus amet turpis sed. Proin iaculis feugiat massa risus amet nulla. Elementum mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus.`
-        }]);
-        setQualSurvey([{
-            image: globalqual,
-            heading: "Transcriptional Solution"
-        },{
-            image: inpersonal,
-            heading: "Recruitment Solution"
-        },{
-            image: telephonic,
-            heading: "Consulting Solutions"
-        }])
-    }, [])
-
-    const survey_redirect= (e)=>{
-        e.preventDefault();
-        const id= e.currentTarget.id;
-        // console.log("here is the id", e.currentTarget.id);
-        if(Number(id)===0)
-        {
-            window.location.replace("/services/transcriptionservice");
-        }
-        if(Number(id)===1)
-        {
-            window.location.replace("/services/recruitmentservice");
-        }
-        if(Number(id)===2)
-        {
-            window.location.replace("/services/consultingservice");
-        }
-    }
    
-    // const lists= document.querySelector('.product_test_unordered_list');
+    const content=[{
+        heading1: "Our online survey ",
+        heading2: "made approaches",
+        lists: ["Innovative Data Collection Technologies", "Advance Sampling Technologies", "Customised Survey Design", "Comprehensive Data Analysis"],
+        sectionHeading1: "Innovative ",
+        sectionHeading2: "Data Collection Technologiess",
+        sectionText: "Mirats Insights is a forerunner in implementing innovative data collection technologies in our online surveys. We harness the power of advanced technologies, from AI-enhanced analytics to real-time data gathering methods, to ensure we capture diverse and thorough insights for our clients. Our tech-driven approach to data collection equips us with versatility and efficiency, making our market research services stand out in the industry.",
+        sectionListHeading: "Benefits of using Mirats Insights -",
+        sectionListPoints: ["Data Reliability and Precision: Our advanced data collection technologies ensure the collection of high-quality, trustworthy data.", "Scalability: The innovative technologies we use allow for scalability, meaning we can handle projects of any size or complexity effectively."],
+    }]
+    const cardsHeadings = [{
+        heading1: "Essential characteristics of effective ",
+        heading2: "DIY survey platforms",
+    }]
 
-    // const prevListBtn = (e) => {
-    //     e.preventDefault();
-    //     let width = listsRef.current.clientWidth;
-    //     setScrollLeft((prevScrollLeft) => prevScrollLeft - width);
-    //   };
-    
-    //   const nextListBtn = (e) => {
-    //     e.preventDefault();
-    //     let width = listsRef.current.clientWidth;
-    //     setScrollLeft((prevScrollLeft) => prevScrollLeft + width);
-    //   };
+    const cardsContent = [{
+        cardHeading: "User-Friendly Interface",
+        cardText: "The platform should be intuitive and easy to navigate. Users should be able to create surveys without difficulty, customize them as desired, and distribute them with just a few clicks. The interface should also be appealing and well-organized, making the process of survey creation and analysis enjoyable and efficient.",
+    }, {
+        cardHeading: "Customization and Flexibility",
+        cardText: "An effective DIY survey platform should provide a range of customization options to ensure the survey meets the specific needs of the user. This could include a variety of question types (multiple choice, rating scale, open-ended), options for branding and design elements, and flexibility in distribution methods (email, social media, website embed)."
+    }, {
+        cardHeading: "Powerful Analytical Tools",
+        cardText: "After the survey is conducted, users need tools to make sense of the data. A good DIY survey platform should offer robust data analysis tools. These could include real-time reporting, data visualization options (like graphs and charts), cross-tabulation for more complex analysis, and data export options for further processing in other software."
+    }]
 
-    // const prevListBtn=()=>{
-    //     let width= lists.clientWidth;
-    //     lists.scrollLeft= lists.scrollLeft-width;
-    // }
-    // const nextListBtn=()=>{
-    //     let width= lists.clientWidth;
-    //     lists.scrollLeft= lists.scrollLeft+width; 
-    // }
+    const slidingHeading = ["Your favourite upcoming", " quantitative solution "];
+    const slidingSurveys = [{
+        image: globalSurveyImg,
+        text: "Global Sample"
+    }, {
+        image: globalQunatativeSurveyImg,
+        text: "Global Qunatitative Fieldwork"
+    }, {
+        image: endToEndSurveyImg,
+        text: "End to End Sample Surveys"
+    }, {
+        image: onlineSurveyImg,
+        text: "online Surveys"
+    }];
+
+    const unFlashed=[{
+        heading: "Complete range of services",
+        image: unFlashImg4,
+        text: `Complete range of services
+        At Mirats Insights, we offer a comprehensive suite of services as part of our Global Quantitative Fieldwork solutions. This includes everything from designing robust research methodologies and creating data collection tools to managing data processing and analysis. Our clients benefit from our end-to-end research management, saving time and resources that would otherwise be required to coordinate multiple service providers. Our team of expert researchers ensures that each step of the process is executed with precision and diligence to deliver reliable, actionable insights.`
+    },{
+        heading: "Full solution integration",
+        image: unFlashImg5,
+        text: `We understand that research data doesn't exist in a vacuum – it's most powerful when integrated with other business information systems. That's why Mirats Insights is committed to offering full solution integration as part of our Global Quantitative Fieldwork services. This means we can help incorporate the insights generated from our research into your existing business intelligence, CRM, or other data management systems. This seamless integration ensures that the valuable insights we provide can be easily accessed and utilized across your organization for maximum impact.`
+    },{
+        heading: "Leading insights community platform",
+        image: unFlashImg6,
+        text: `Our Global Quantitative Fieldwork solutions are powered by our leading insights community platform. This platform enables us to connect with respondents from around the world, ensuring that we can gather a wide range of perspectives for our research. But it's more than just a data collection tool – it's a space where respondents can engage in meaningful conversations, share their experiences, and contribute to the development of products and services that truly meet their needs. As a result, our clients don't just get data; they get deep, nuanced insights that can truly drive their business forward.`
+    },{
+        heading: "Leading insights community platform",
+        image: unFlashImg7,
+        text: `Our Global Quantitative Fieldwork solutions are powered by our leading insights community platform. This platform enables us to connect with respondents from around the world, ensuring that we can gather a wide range of perspectives for our research. But it's more than just a data collection tool – it's a space where respondents can engage in meaningful conversations, share their experiences, and contribute to the development of products and services that truly meet their needs. As a result, our clients don't just get data; they get deep, nuanced insights that can truly drive their business forward.`
+    },{
+        heading: "Leading insights community platform",
+        image: unFlashImg8,
+        text: `Our Global Quantitative Fieldwork solutions are powered by our leading insights community platform. This platform enables us to connect with respondents from around the world, ensuring that we can gather a wide range of perspectives for our research. But it's more than just a data collection tool – it's a space where respondents can engage in meaningful conversations, share their experiences, and contribute to the development of products and services that truly meet their needs. As a result, our clients don't just get data; they get deep, nuanced insights that can truly drive their business forward.`
+    }]
     return (
         <div className="product_test_body">
             <img src={banner} alt="banner" />
-            <div className="product_test_level_two">
-                <div className="product_test_level_two_heading">
-                    <h2>Consulting solution services made </h2>
-                    <h2>smarter, faster, and easier</h2>
-                </div>
-                <div className="product_test_level_two_heading_card_parent">
-                    {cards.map((card, index)=>{
-                        let i= index<= cardIcons.length-1 ? index: index%cardIcons.length;
-                        return(
-                            <div className="product_test_level_two_heading_card_child" key={index} id={'`${index}`'}>
-                                <img src={cardIcons[i]} alt="cardIcons" />
-                                <h2>{card.heading}</h2>
-                                <p>{card.text}</p>
-                            </div>
-                        )
-                    })}
-                </div>
-            </div>
-            <div className="product_test_level_three">
-                <div className="product_test_level_three_grid">
-                    <section className="product_test_level_three_grid_text">
-                        <h2>Taste tests</h2>
-                        <img src={plus} alt="plus" onClick={()=>setStattus1(!status1)}/>
-                    </section>
-                    <section>
-                        {status1 ? <img src={image1} alt="image1" />: 
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur. Donec sodales et enim lorem quam tristique. Tellus erat metus ut amet quis in nec maecenas. Sit in cum elit eget neque lorem et est at. Proin semper pulvinar pellentesque sed penatibus mi aliquet vitae hac. Purus augue luctus pellentesque aliquet egestas convallis eget. Tellus tortor scelerisque nunc porttitor. Ut justo faucibus convallis ullamcorper mauris enim vitae vulputate pellentesque. Dictum lectus id tincidunt senectus. Pretium nibh massa sed lectus sit lacus donec dui.
-                            Sed semper phasellus mattis urna sollicitudin malesuada vulputate pharetra. Id eu habitant eget suscipit. Praesent risus sit non sem eget. Ornare et rutrum sit sed suspendisse pellentesque. Nec auctor neque in gravida eget elementum urna.
-                        </p>
-                        }
-                    </section>
-                </div>
-                <div className="product_test_level_three_grid">
-                    <section>
-                        {status2 ? <img src={image2} alt="image2" />: 
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur. Donec sodales et enim lorem quam tristique. Tellus erat metus ut amet quis in nec maecenas. Sit in cum elit eget neque lorem et est at. Proin semper pulvinar pellentesque sed penatibus mi aliquet vitae hac. Purus augue luctus pellentesque aliquet egestas convallis eget. Tellus tortor scelerisque nunc porttitor. Ut justo faucibus convallis ullamcorper mauris enim vitae vulputate pellentesque. Dictum lectus id tincidunt senectus. Pretium nibh massa sed lectus sit lacus donec dui.
-                            Sed semper phasellus mattis urna sollicitudin malesuada vulputate pharetra. Id eu habitant eget suscipit. Praesent risus sit non sem eget. Ornare et rutrum sit sed suspendisse pellentesque. Nec auctor neque in gravida eget elementum urna.
-                        </p>
-                        }
-                    </section>
-                    <section className="product_test_level_three_grid_text">
-                        <h2>IHUTs/HUTs</h2>
-                        <img src={plus} alt="plus" onClick={()=>setStattus2(!status2)}/>
-                    </section>
-                </div>
-                <div className="product_test_level_three_grid">
-                    <section className="product_test_level_three_grid_text">
-                        <h2>Central Location Tests</h2>
-                        <img src={plus} alt="plus" onClick={()=>setStattus3(!status3)}/>
-                    </section>
-                    <section>
-                        {status3 ? <img src={image3} alt="image3" />: 
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur. Donec sodales et enim lorem quam tristique. Tellus erat metus ut amet quis in nec maecenas. Sit in cum elit eget neque lorem et est at. Proin semper pulvinar pellentesque sed penatibus mi aliquet vitae hac. Purus augue luctus pellentesque aliquet egestas convallis eget. Tellus tortor scelerisque nunc porttitor. Ut justo faucibus convallis ullamcorper mauris enim vitae vulputate pellentesque. Dictum lectus id tincidunt senectus. Pretium nibh massa sed lectus sit lacus donec dui.
-                            Sed semper phasellus mattis urna sollicitudin malesuada vulputate pharetra. Id eu habitant eget suscipit. Praesent risus sit non sem eget. Ornare et rutrum sit sed suspendisse pellentesque. Nec auctor neque in gravida eget elementum urna.
-                        </p>
-                        }
-                    </section>
-                </div>
-                <div className="product_test_level_three_grid">
-                    <section>
-                        {status4 ? <img src={image4} alt="image4" />: 
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur. Donec sodales et enim lorem quam tristique. Tellus erat metus ut amet quis in nec maecenas. Sit in cum elit eget neque lorem et est at. Proin semper pulvinar pellentesque sed penatibus mi aliquet vitae hac. Purus augue luctus pellentesque aliquet egestas convallis eget. Tellus tortor scelerisque nunc porttitor. Ut justo faucibus convallis ullamcorper mauris enim vitae vulputate pellentesque. Dictum lectus id tincidunt senectus. Pretium nibh massa sed lectus sit lacus donec dui.
-                            Sed semper phasellus mattis urna sollicitudin malesuada vulputate pharetra. Id eu habitant eget suscipit. Praesent risus sit non sem eget. Ornare et rutrum sit sed suspendisse pellentesque. Nec auctor neque in gravida eget elementum urna.
-                        </p>
-                        }
-                    </section>
-                    <section className="product_test_level_three_grid_text">
-                        <h2>Product Clinics</h2>
-                        <img src={plus} alt="plus" onClick={()=>setStattus4(!status4)}/>
-                    </section>
-                </div>
-                <div className="product_test_level_three_grid">
-                    <section className="product_test_level_three_grid_text">
-                        <h2>Product Reviews</h2>
-                        <img src={plus} alt="plus" onClick={()=>setStattus5(!status5)}/>
-                    </section>
-                    <section>
-                        {status5 ? <img src={image5} alt="image5" />: 
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur. Donec sodales et enim lorem quam tristique. Tellus erat metus ut amet quis in nec maecenas. Sit in cum elit eget neque lorem et est at. Proin semper pulvinar pellentesque sed penatibus mi aliquet vitae hac. Purus augue luctus pellentesque aliquet egestas convallis eget. Tellus tortor scelerisque nunc porttitor. Ut justo faucibus convallis ullamcorper mauris enim vitae vulputate pellentesque. Dictum lectus id tincidunt senectus. Pretium nibh massa sed lectus sit lacus donec dui.
-                            Sed semper phasellus mattis urna sollicitudin malesuada vulputate pharetra. Id eu habitant eget suscipit. Praesent risus sit non sem eget. Ornare et rutrum sit sed suspendisse pellentesque. Nec auctor neque in gravida eget elementum urna.
-                        </p>
-                        }
-                    </section>
-                </div>
-            </div>
-            <div className="product_test_level_four">
-                <div className="product_test_level_four_heading">
-                    <h2>our product test</h2>
-                    <h2>made approaches</h2>
-                </div>
-                <div className="product_test_level_four_unordered_list">
-                    {/* <button onClick={prevListBtn}></button> */}
-                    <ul className="product_test_unordered_list" >
-                        <li>Innovative Data Collection Technologies</li>
-                        <li>Advance Sampling Technologies</li>
-                        <li>Customised Survey Design</li>
-                        <li>Comprehensive Data Analysis</li>
-                        <li>Innovative Advance Customised Comprehensive</li>
-                    </ul>
-                    {/* <button onClick={nextListBtn}></button> */}
-                </div>
-                <div className="product_test_level_four_sec">
-                    <section>
-                        <img src={image_list_sec} alt="image_list_sec" />
-                    </section>
-                    <section>
-                        <div>
-                            <h2>User-Friendly<span> Survey Creation Tools</span></h2>
-                            <p>Feugiat egestas ut laoreet dolor lacinia eget nisi cursus. Maecenas elementum commodo tortor purus. Turpis sapien laoreet pharetra egestas morbi condimentum hendrerit neque. Auctor tincidunt elementum eleifend adipiscing purus. Cras nunc a tempor neque elit molestie malesuada diam morbi. Consequat aenean mi lacinia interdum eros ipsum dignissim amet pulvinar. Id ullamcorper at nisi venenatis urna nunc purus mi faucibus. Vitae aliquam pulvinar amet nulla rhoncus magna.</p>
-                        </div>
-                        <div>
-                            <h3>Benefits of using Mirats Insights -</h3>
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet consectetur Gravida malesua egestas a egestas.</li>
-                                <li>Quis justo quisque purus at et Lorem  purus. </li>
-                                <li>Massa eget elementum nunc semper. Eu laoreet mattis nec ullamcorper nunc Semper sed .</li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <div className="product_test_level_five">
-                <p>Upcoming Surveys</p>
-                <div className="product_test_level_five_heading">
-                    <h2>Your favourite upcoming</h2>
-                    <h2>Quanlitative Solution</h2>
-                </div>
-                <div className="product_test_level_five_surveys_parent">
-                    {qualSurvey.map((element, index)=>{
-                        return(
-                            <div className="product_test_level_five_surveys_child" key={index} id={`${index}`} onClick={survey_redirect}>
-                                <img src={element.image} alt="element_image" />
-                                <h2>{element.heading}</h2>
-                            </div>
-                        )
-                    })}
-                </div>
-            </div>
+            <Cards cardsHeadings={cardsHeadings} cardsContent={cardsContent} />
+            <UnFlashedText unFlashed={unFlashed}/>
+            <Listing content={content} image={listingImg2} />
+            <SlidingShow slidingHeading={slidingHeading} slidingSurveys={slidingSurveys}/>
         </div>
     )
 }

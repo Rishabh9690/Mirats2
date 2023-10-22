@@ -1,0 +1,41 @@
+.ques_ans_body{
+    padding: 60px;
+    background-color: #E0E0E0;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.25);
+}
+.ques_ans_body_heading h2{
+    color: #333;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+}
+.ques_ans_body_heading h2 span{
+    color: #6E6E73;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+}
+.ques_ans_body_parent{
+    width: 70%;
+    margin: 30px auto;
+    text-align: left;
+}
+.ques_ans_body_child_ques{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.ques_ans_body_child_ques img{
+    width: 24px;
+    height: 24px;
+    background-color: #E0E0E0;
+}
+.ques_ans_body_child p{
+    margin: 0 ;
+}

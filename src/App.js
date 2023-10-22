@@ -1,14 +1,14 @@
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import {Routes, Route, Link} from "react-router-dom";
-import Header from './containers/Headers';
-import Footer from './containers/Footer';
-import Homes from './components/homes/Home';
+import Header from './containers/header/Headers.js';
+import FooterOne from './containers/footer/footerOne/FooterOne.js';
+import FooterTwo from './containers/footer/footerTwo/FooterTwo.js';
+import Home from './components/homes/Home.js'
 import OnlineSurveys from './components/services/onlinesurveys/OnlineSurveys';
 import DiySurveys from './components/services/diysurveys/DiySurveys';
 import GlobalSurvey from './components/services/globalSurvey/GlobalSurvey';
 import GlobalQunatitative from './components/services/quantativeSurveys/GlobalQuantitative';
-// import EndToEndSurvey from './components/services/endToEndSurveys/EndToEndSurvey';
 import EndToEndSurvey from "./components/services/endtoend/EndToEndSurvey";
 import In_personal_qual from './components/mirats_qual_services/in_personal/In_personal_qual';
 import Digital_qual from './components/mirats_qual_services/digital_qual/Digital_qual';
@@ -28,6 +28,7 @@ import MediaAndTechnology from './components/industries/mediaAndTechnology/Media
 import AboutUs from './components/companies/aboutUs/AboutUs';
 import Leadership from './components/companies/leadership/Leadership';
 import AnupamKumar from './components/companies/leadership/leaders/AnupamKumar';
+import MayankSir from './components/companies/leadership/leaders/MayankSir';
 import GlobalOffices from './components/companies/globalOffices/global/GlobalOffices';
 import MacerLucknow from './components/companies/globalOffices/offices/MacerLucknow';
 import MiratsLucknow from './components/companies/globalOffices/offices/MiratsLucknow';
@@ -55,8 +56,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        {/* <Route path='/' element={<Home />} /> */}
-        <Route path='/' element={<Homes /> } /> 
+        <Route path='/' element={<Home />} />
         <Route path='/services/onlinesurveys' element={<OnlineSurveys />} />
         <Route path='/services/diysurveys' element={<DiySurveys />} />
         <Route path='/services/globalsurveys' element={<GlobalSurvey />} />
@@ -81,6 +81,7 @@ function App() {
         <Route path='/company/aboutus' element={<AboutUs />} />
         <Route path='/company/leadership' element={<Leadership />} />
         <Route path='/company/leaders/AnupamKumar' element={<AnupamKumar />} />
+        <Route path='/company/leaders/MayankPatel' element={<MayankSir />} />
         <Route path='/company/globaloffices' element={<GlobalOffices />} />
         <Route path='/company/globaloffices/Maceroffice' element={<MacerLucknow />} />
         <Route path='/company/globaloffices/Miratsoffice' element={<MiratsLucknow />} />
@@ -99,10 +100,11 @@ function App() {
         <Route path='/resources/healthcareaudiencebook' element={<HealthCareAudienceBook />} />
         <Route path='/resources/qualityandsecuritydocs' element={<QualitySecurityDocs />} />
         <Route path='/resources/esomar' element={<Esomar />} />
-        <Route path='/contacts/connecting' element={<Connecting />} />
-        <Route path='/contacts/MakeaCall' element={<MakeaCall />} />
+        {/* <Route path='/contacts/connecting' element={<Connecting />} />
+        <Route path='/contacts/MakeaCall' element={<MakeaCall />} /> */}
       </Routes >
-      <Footer />
+      <FooterOne />
+      <FooterTwo />
     </div>
   );
 }

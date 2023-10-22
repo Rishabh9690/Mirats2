@@ -1,130 +1,78 @@
-import React, { useEffect, useState } from "react";
-import banner from "./images/Banner.svg";
-import hand_clock from "../../services/service_img/hand_clock.svg";
-import star_chat from "../../services/service_img/star_chat.svg";
-import setting from "../../services/service_img/setting.svg";
-import brandImg from "./images/brandImg.svg";
-import customerImg from "./images/customerImg.png";
-import image_list_sec from "../recruitment/images/image_list_sec.svg";
-import right from "../../services/service_img/right.svg";
-import telephonic from "../images/telephonic.svg";
-import globalqual from "../images/globalqual.svg";
-import inpersonal from "../images/inpersonal.svg";
-import AliceCarousel from 'react-alice-carousel';
+import React from "react";
+import banner from "../../images/banners/hybrid.png";
+import customerMeet from "../../images/images/customerMeet.png";
+import curlyMess from "../../images/images/curlyMess.png";
+import Cards from "../../cards/Cards.js";
+import listingImg2 from "../../images/images/listingImg2.png";
+import SlidingShow from "../../slidings/SlidingShow.js";
+import QuestionAnswer from "../../questionAnswer/QuestionAnswer.js";
+import Listing from "../../listing/Listing.js";
 import 'react-alice-carousel/lib/alice-carousel.css';
+import globalSurveyImg from "../../images/images/globalSurveyImg.png";
+import globalQunatativeSurveyImg from "../../images/images/globalQunatativeSurveyImg.png";
+import endToEndSurveyImg from "../../images/images/endToEndSurveyImg.png";
+import onlineSurveyImg from "../../images/images/onlineSurveyImg.png";
 import "./hybrid_research.css";
 const HybriResearchServices =()=>{
-    const [cardIcons, setCardIcons]= useState([]);
-    const [cards, setCards] = useState([]);
-    const [qualSurvey, setQualSurvey] = useState([]);
+   
+    const cardsHeadings = [{
+        heading1: "Hybrid research solution made ",
+        heading2: "smarter, faster, and easier",
+    }]
 
-    useEffect(()=>{
-        setCardIcons([hand_clock, star_chat, setting]);
-        setCards([{
-            heading: `Ideal Research Spaces`,
-            text: `mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus.
-            Urna eget bibendum feugiat congue sed. Consectetur at a enim dictum tempus. Aliquet eget lorem duis scelerisque ipsum mauris augue et. Faucibus quis venenatis ultricies dignissim tincidunt sit nulla. Consequat condimentum enim bibendum dictum. Faucibus quis venenatis `,
-        },{
-            heading: `Flexible Environments`,
-            text: ` in ornare feugiat sit tristique nibh. Neque sit ac lacinia eu. Neque consectetur enim placerat duis phasellus. Facilisis mauris nulla mi placerat. Magnis interdum nisl felis fames velit odio. Scelerisque commodo nulla vitae neque sit aliquam at commodo eu. Maecenas proin nulla mauris sit dui faucibus at vestibulum. Consequat pellentesque tincidunt neque cursus hac.`,
-        },{
-            heading: `A Consultative Approach`,
-            text: `proin nulla mauris sit dui faucibus at vestibulum. Consequat pellentesque tincidunt neque cursus hac. In vel neque blandit amet nunc urna duis. Consequat nulla feugiat lectus amet turpis sed. Proin iaculis feugiat massa risus amet nulla. Elementum mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus.`
-        }]);
-        // setGridCards([{
-        //     image: customerimg,
-        //     heading: `Customer Understanding`,
-        //     text: `Lorem ipsum dolor sit amet consectetur. Eget eros habitant et scelerisque. Condimentum dictum pellentesque vitae pharetra morbi risus. Ut aliquam in id arcu interdum nulla dipiscing enim adipiscing massa sagittis`
-        // },{
-        //     image: brandimg,
-        //     heading: `Brand Perception`,
-        //     text:  `Ut aliquam in id arcu interdum nulla. Eget eros habitant et scelerisque. Condimentum dictum pellentesque vitae pharetra morbi risus. . Adipiscing enim adipiscing massa sagittis pellentesque egestas`
-        // },{
-        //     image: communicationimg,
-        //     heading: `Communication`,
-        //     text: `Condimentum dictum pellentesque vitae pharetra morbi risus.Eget eros habitant et scelerisque. Condimentum dictum pellentesque vitae pharetra morbi risus. Ut aliquam in id arcu interdum nulla.  massa sagittis Pulvinar elit non `
-        // },{
-        //     image: innovatiponimg,
-        //     heading: `Innovation`,
-        //     text: `habitant et scelerisque. Condimentum dictum pellentesque vitae pharetra morbi risus. Ut aliquam in id arcu interdum nulla. Adipiscing enim adipiscing massa sagittis pellentesque egestas Pulvinar elit non `
-        // }])
+    const cardsContent = [{
+        cardHeading: "User-Friendly Interface",
+        cardText: "The platform should be intuitive and easy to navigate. Users should be able to create surveys without difficulty, customize them as desired, and distribute them with just a few clicks. The interface should also be appealing and well-organized, making the process of survey creation and analysis enjoyable and efficient.",
+    }, {
+        cardHeading: "Customization and Flexibility",
+        cardText: "An effective DIY survey platform should provide a range of customization options to ensure the survey meets the specific needs of the user. This could include a variety of question types (multiple choice, rating scale, open-ended), options for branding and design elements, and flexibility in distribution methods (email, social media, website embed)."
+    }, {
+        cardHeading: "Powerful Analytical Tools",
+        cardText: "After the survey is conducted, users need tools to make sense of the data. A good DIY survey platform should offer robust data analysis tools. These could include real-time reporting, data visualization options (like graphs and charts), cross-tabulation for more complex analysis, and data export options for further processing in other software."
+    }]
 
-
-        setQualSurvey([{
-            image: inpersonal,
-            heading: "Product test Solution"
-        },{
-            image: telephonic,
-            heading: "Consulting Solutions"
-        }, {
-            image: globalqual,
-            heading: "Recruitment Solution"
-        }])
-    },[])
-
-    const responsive = {
-        180: { items: 1 },
-        248: { items: 2 },
-        304: { items: 3 },
-        554: { items: 4 },
-    };
-
-    const listItems = [
-        <div className="item" data-value="1" id={0}>
-            <p>Innovative Data Collection Technologies</p>
-        </div>,
-        <div className="item" data-value="2" id={1}>
-            <p>Advance Sampling Technologies</p>
-        </div>,
-        <div className="item" data-value="3" id={2}>
-            <p>Customised Survey Design</p>
-        </div>,
-        <div className="item" data-value="4" id={3}>
-            <p>Comprehensive Data Analysis</p>
-        </div>,
-        <div className="item" data-value="5" id={4}>
-            <p>Innovative Advance Customised Comprehensive</p>
-        </div>,
-    ];
-
-    const survey_redirect= (e)=>{
-        e.preventDefault();
-        const id= e.currentTarget.id;
-        // console.log("here is the id", e.currentTarget.id);
-        if(Number(id)===0)
-        {
-            window.location.replace("/services/producttestservice");
-        }
-        if(Number(id)===1)
-        {
-            window.location.replace("/services/transcriptionservice");
-        }
-        if(Number(id)===2)
-        {
-            window.location.replace("/services/recruitmentservice");
-        }
-    }
+    const slidingHeading = ["Your favourite upcoming", " quantitative solution "];
+    const slidingSurveys = [{
+        image: globalSurveyImg,
+        text: "Global Sample"
+    }, {
+        image: globalQunatativeSurveyImg,
+        text: "Global Qunatitative Fieldwork"
+    }, {
+        image: endToEndSurveyImg,
+        text: "End to End Sample Surveys"
+    }, {
+        image: onlineSurveyImg,
+        text: "online Surveys"
+    }];
+    const quesAnsHeadings=["Benefits of", " online survey"];
+    const quesAndData=[{
+        ques: "What are the benefits of reputation management software?",
+        ans:  "In the digital era we live in, the internet has completely reshaped the way businesses interact with their customers. Customers are increasingly turning to online reviews and social media to voice their opinions and make purchasing decisions. As such, the reputation of a business online has never been more important, and this is where reputation management software comes into play..",
+    },{
+        ques: "Eliminates manual data collection",
+        ans: "In the dynamic business landscape, using reputation management software offers several key advantages. One of the most significant is the elimination of manual data collection. The software automates the process of gathering reviews, comments, and feedback from various online platforms, freeing up valuable time and resources that can be better utilized elsewhere.",
+    },{
+        ques: "Get real-time insights?",
+        ans: "Another benefit is the ability to gain real-time insights. The software provides an ongoing, live snapshot of your company's online reputation, enabling you to react quickly to any changes or trends. This means you can address negative feedback promptly or capitalize on positive comments without delay.",
+    },{
+        ques: "You can reach more people, faster and easier?",
+        ans:  "Reputation management software enables you to reach a broader audience more rapidly and easily. With the software's ability to monitor multiple platforms simultaneously, you can engage with a larger number of people. It also simplifies the process of responding to reviews and comments, making it quicker and easier to maintain a positive online presence and build strong relationships with your customers."
+    }]
+    const content=[{
+        heading1: "Our online survey ",
+        heading2: "made approaches",
+        lists: ["Innovative Data Collection Technologies", "Advance Sampling Technologies", "Customised Survey Design", "Comprehensive Data Analysis"],
+        sectionHeading1: "Innovative ",
+        sectionHeading2: "Data Collection Technologiess",
+        sectionText: "Mirats Insights is a forerunner in implementing innovative data collection technologies in our online surveys. We harness the power of advanced technologies, from AI-enhanced analytics to real-time data gathering methods, to ensure we capture diverse and thorough insights for our clients. Our tech-driven approach to data collection equips us with versatility and efficiency, making our market research services stand out in the industry.",
+        sectionListHeading: "Benefits of using Mirats Insights -",
+        sectionListPoints: ["Data Reliability and Precision: Our advanced data collection technologies ensure the collection of high-quality, trustworthy data.", "Scalability: The innovative technologies we use allow for scalability, meaning we can handle projects of any size or complexity effectively."],
+    }]
     return(
         <div className="hybrid_research_body">
             <img src={banner} alt="banner" />
-            <div className="hybrid_research_level_two">
-                <div className="hybrid_research_level_two_heading">
-                    <h2>Hybrid research solution services made </h2>
-                    <h2>smarter, faster, and easier</h2>
-                </div>
-                <div className="hybrid_research_level_two_heading_card_parent">
-                    {cards.map((card, index)=>{
-                        let i= index<= cardIcons.length-1 ? index: index%cardIcons.length;
-                        return(
-                            <div className="hybrid_research_level_two_heading_card_child" key={index} id={'`${index}`'}>
-                                <img src={cardIcons[i]} alt="cardIcons" />
-                                <h2>{card.heading}</h2>
-                                <p>{card.text}</p>
-                            </div>
-                        )
-                    })}
-                </div>
-            </div>
+            <Cards cardsHeadings={cardsHeadings} cardsContent={cardsContent} />
             <div className="hybrid_research_level_three">
                 <div className="hybrid_research_level_three_heading">
                     <h2>Take a deep dive into your favourite </h2>
@@ -132,7 +80,7 @@ const HybriResearchServices =()=>{
                 </div>
                 <div className="hybrid_research_level_three_sec">
                     <section>
-                        <img src={customerImg} alt="customerImg" />
+                        <img src={customerMeet} alt="customerImg" />
                     </section>
                     <section>
                         <h2>Customer Understanding</h2>
@@ -145,76 +93,13 @@ const HybriResearchServices =()=>{
                         <p>Adipiscing enim adipiscing massa sagittis pellentesque egestas. Pulvinar elit non donec sit orci at eu. Et sollicitudin mauris molestie blandit. Commodo varius sed donec auctor eleifend tristique vel. </p>
                     </section>
                     <section>
-                        <img src={brandImg} alt="customerImg" />
+                        <img src={curlyMess} alt="customerImg" />
                     </section>
                 </div>
             </div>
-            <div className="hybrid_research_level_four">
-                <div className="hybrid_research_level_four_heading">
-                    <h2>Our hybrid research solution</h2>
-                    <h2>made approaches</h2>
-                </div>
-                <div className="hybrid_research_level_four_unordered_list">
-                    <AliceCarousel
-                        autoPlayStrategy="none"
-                        animationDuration={500}
-                        animationType="fadeout"
-                        // infinite
-                        touchTracking={false}
-                        disableDotsControls
-                        buttonsDisabled
-                        nextButton={<img src={right} alt="right_button"/>}
-                        items={listItems}
-                        responsive={responsive}
-                        mouseTracking
-                        controlsStrategy="alternate"
-                    />
-                </div>
-                <div className="hybrid_research_level_four_sec">
-                    <section>
-                        <img src={image_list_sec} alt="image_list_sec" />
-                    </section>
-                    <section>
-                        <div>
-                            <h2>User-Friendly<span> Survey Creation Tools</span></h2>
-                            <p>Feugiat egestas ut laoreet dolor lacinia eget nisi cursus. Maecenas elementum commodo tortor purus. Turpis sapien laoreet pharetra egestas morbi condimentum hendrerit neque. Auctor tincidunt elementum eleifend adipiscing purus. Cras nunc a tempor neque elit molestie malesuada diam morbi. Consequat aenean mi lacinia interdum eros ipsum dignissim amet pulvinar. Id ullamcorper at nisi venenatis urna nunc purus mi faucibus. Vitae aliquam pulvinar amet nulla rhoncus magna.</p>
-                        </div>
-                        <div>
-                            <h3>Benefits of using Mirats Insights -</h3>
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet consectetur Gravida malesua egestas a egestas.</li>
-                                <li>Quis justo quisque purus at et Lorem  purus. </li>
-                                <li>Massa eget elementum nunc semper. Eu laoreet mattis nec ullamcorper nunc Semper sed .</li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <div className="hybrid_research_level_five">
-                <p>Upcoming Surveys</p>
-                <div className="hybrid_research_level_five_heading">
-                    <h2>Your favourite upcoming</h2>
-                    <h2>Quanlitative Solution</h2>
-                </div>
-                <div className="hybrid_research_level_five_surveys_parent">
-                    {qualSurvey.map((element, index)=>{
-                        return(
-                            <div className="hybrid_research_level_five_surveys_child" key={index} id={`${index}`} onClick={survey_redirect}>
-                                <img src={element.image} alt="element_image" />
-                                <h2>{element.heading}</h2>
-                            </div>
-                        )
-                    })}
-                </div>
-            </div>
-            <div className="hybrid_research_level_six">
-                <div className="hybrid_research_level_six_heading">
-                    <h2>Benefits of <span> hybrid research solution</span></h2>
-                </div>
-                <div className="hybrid_research_level_six_faq">
-                    
-                </div>
-            </div>
+            <Listing content={content} image={listingImg2} />
+            <SlidingShow slidingHeading={slidingHeading} slidingSurveys={slidingSurveys}/>
+            <QuestionAnswer quesAnsHeadings={quesAnsHeadings} quesAndData={quesAndData}/>
         </div>
     )
 }

@@ -1,192 +1,97 @@
 import react, { useEffect, useState } from "react";
-import {Collapse} from 'react-collapse';
-// import { useNavigate } from "react-router-dom";
-import banner from "../service_img/Banner.svg";
-import setting from "../service_img/setting.svg";
-import star_chat from "../service_img/star_chat.svg";
-import hand_clock from "../service_img/hand_clock.svg";
-import online_surveys from "../service_img/online_surveys.svg";
-import blue_boy from "../service_img/blue_boy.svg";
-import diy from "../service_img/diy.svg";
-import global from "../service_img/global.svg";
-import quantative from "../service_img/quantative.svg";
-import endtoend from "../service_img/endtoend.svg";
-import onlinesurvey from "../service_img/onlinesurvey.svg";
-import left from "../service_img/left.svg";
-import right from "../service_img/right.svg";
-import plus from "../service_img/plus.svg";
-import cross from "../service_img/cross.svg";
-import list_right from "../service_img/list_right.svg";
-import list_left from "../service_img/list_left.svg";
-import Slider from "react-slick";
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
+import banner from "../../images/banners/onlineSurveys.png";
+import listingImg1 from "../../images/images/listingImg1.png";
+import Cards from "../../cards/Cards.js";
+import Listing from "../../listing/Listing.js";
+import SlidingShow from "../../slidings/SlidingShow.js";
+import QuestionAnswer from "../../questionAnswer/QuestionAnswer.js";
+import globalSurveyImg from "../../images/images/globalSurveyImg.png";
+import globalQunatativeSurveyImg from "../../images/images/globalQunatativeSurveyImg.png";
+import endToEndSurveyImg from "../../images/images/endToEndSurveyImg.png";
+import onlineSurveyImg from "../../images/images/onlineSurveyImg.png";
+import diySurvey from "../../images/images/diySurvey.png";
 import "./onlinesurveys.css";
 
 const OnlineSurveys =()=>{
 
-    const [cardImg, setCardImg]= useState([]);
-    const [arrCard, setArrCard]=  useState([]);
-    const [slidingSurvey, setSlidingSurvey]= useState([]);
-    const [ques1, setQues1] = useState(false);
-    const [ques2, setQues2] = useState(false);
-    const [ques3, setQues3] = useState(false);
-    const [ques4, setQues4] = useState(false);
+    const cardsHeadings=[{
+        heading1: "Online survey made",
+        heading2: "smarter, faster, and easier",
+    }]
 
-    useEffect(()=>{
-        setSlidingSurvey([{
-            Image: diy,
-            title: "DIY Surveys"
-        },{
-            Image: global,
-            title: "Global Sample"
-        },{
-            Image: quantative,
-            title: "Global Quantitative Fieldwork"
-        }]);
-        setCardImg([hand_clock, star_chat, setting]);
-        setArrCard([{
-            heading: "Feasibility Consulting",
-            text: "mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus. Urna eget bibendum feugiat congue sed. Consectetur at a enim dictum tempus. Aliquet eget lorem duis scelerisque ipsum mauris augue et. Faucibus quis venenatis ultricies dignissim tincidunt sit nulla. Consequat condimentum enim bibendum dictum. Faucibus quis venenatis"
-        },{
-            heading: "Sampling",
-            text: " in ornare feugiat sit tristique nibh. Neque sit ac lacinia eu. Neque consectetur enim placerat duis phasellus. Facilisis mauris nulla mi placerat. Magnis interdum nisl felis fames velit odio. Scelerisque commodo nulla vitae neque sit aliquam at commodo eu. Maecenas proin nulla mauris sit dui faucibus at vestibulum. Consequat pellentesque tincidunt neque cursus hac."
-        },{
-            heading: "Programming & Hosting",
-            text: "proin nulla mauris sit dui faucibus at vestibulum. Consequat pellentesque tincidunt neque cursus hac. In vel neque blandit amet nunc urna duis. Consequat nulla feugiat lectus amet turpis sed. Proin iaculis feugiat massa risus amet nulla. Elementum mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus."
-        },{
-            heading: "Topline Reporting & Analysis",
-            text: "mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus. Urna eget bibendum feugiat congue sed. Consectetur at a enim dictum tempus. Aliquet eget lorem duis scelerisque ipsum mauris augue et. Faucibus quis venenatis ultricies dignissim tincidunt sit nulla. Consequat condimentum enim bibendum dictum. Faucibus quis venenatis"
-        },{
-            heading: "Data Processing & Delivery",
-            text: " in ornare feugiat sit tristique nibh. Neque sit ac lacinia eu. Neque consectetur enim placerat duis phasellus. Facilisis mauris nulla mi placerat. Magnis interdum nisl felis fames velit odio. Scelerisque commodo nulla vitae neque sit aliquam at commodo eu. Maecenas proin nulla mauris sit dui faucibus at vestibulum. Consequat pellentesque tincidunt neque cursus hac."
-        }]);
+    const cardsContent=[{
+        cardHeading:"Feasibility Consulting",  
+        cardText: "At Mirats Insights, we understand the importance of making informed decisions, especially when it involves market research. Our Feasibility Consulting service provides you with comprehensive analyses of your potential market, determining the viability and potential success of your projects or products. Our team of experts uses innovative tools and methodologies to assess the feasibility of your market research projects, helping you reduce risk and make strategic decisions.", 
+    },{
+        cardHeading:"Sampling",
+        cardText: "Our Sampling service ensures that your survey results accurately reflect the opinions of your target audience. We have the expertise to design and implement effective sampling strategies for both online and offline surveys. Our samples are rigorously designed and carefully selected to minimize biases and ensure a diverse and representative respondent pool."
+    },{
+        cardHeading: "Programming & Hosting",
+        cardText: "At Mirats Insights, we provide end-to-end services, including Programming & Hosting. We understand the nuances of online surveys and use the latest technology to create engaging and interactive surveys. Our platform ensures secure data collection, seamless respondent experience, and high-quality results. We handle everything from survey design and programming to hosting, offering you a hassle-free experience."
+    },{
+        cardHeading: "Topline Reporting & Analysis",
+        cardText: "Our Topline Reporting & Analysis service presents an overview of your survey data in an easily digestible format. Our team of analysts provides a high-level summary of the key findings, offering insights that can drive your business strategy. We turn data into actionable insights, helping you understand the bigger picture and make informed decisions."
+    },{
+        cardHeading: "Data Processing & Delivery",
+        cardText: "At Mirats Insights, we take care of all aspects of Data Processing & Delivery. Our experts clean, code, and analyze your data, delivering results that are accurate and reliable. Our rigorous quality checks and validation processes ensure the integrity of the data we provide. We deliver your data in a format that suits your requirements, offering you insights that can guide your business strategies."
+    }]
 
-    }, [])
-    
-    console.log("Here====>", arrCard)
-    const left_controll=()=>{
-        console.log("Left button clicked")
-    }
-    const right_controll=()=>{
-        console.log("Right button clicked")
-    }
+    const content=[{
+        heading1: "Our online survey ",
+        heading2: "made approaches",
+        lists: ["Innovative Data Collection Technologies", "Advance Sampling Technologies", "Customised Survey Design", "Comprehensive Data Analysis"],
+        sectionHeading1: "Innovative ",
+        sectionHeading2: "Data Collection Technologiess",
+        sectionText: "Mirats Insights is a forerunner in implementing innovative data collection technologies in our online surveys. We harness the power of advanced technologies, from AI-enhanced analytics to real-time data gathering methods, to ensure we capture diverse and thorough insights for our clients. Our tech-driven approach to data collection equips us with versatility and efficiency, making our market research services stand out in the industry.",
+        sectionListHeading: "Benefits of using Mirats Insights -",
+        sectionListPoints: ["Data Reliability and Precision: Our advanced data collection technologies ensure the collection of high-quality, trustworthy data.", "Scalability: The innovative technologies we use allow for scalability, meaning we can handle projects of any size or complexity effectively."],
+    }]
 
-    const reDirectToSurveys=(e)=>{
-        e.preventDefault();
-        console.log("Sliding image was clicked");
-        console.log("Element title===>", e.currentTarget.id);
-        if(Number(e.currentTarget.id)===0) window.location.replace('/services/diysurveys');
-        else if (Number(e.currentTarget.id)===1) window.location.replace('/services/globalsurveys');
-        else if (Number(e.currentTarget.id)===2) window.location.replace('/services/globalqunatitativesurveys');
-    }
+    const slidingHeading=["Your favourite upcoming", " quantitative solution "];
+    const slidingSurveys=[{
+        image: globalSurveyImg,
+        text: "Global Sample"
+    },{
+        image: globalQunatativeSurveyImg,
+        text: "Global Qunatitative Fieldwork"
+    },{
+        image: endToEndSurveyImg,
+        text: "End to End Sample Surveys"
+    },{
+        image: onlineSurveyImg,
+        text: "Online Surveys"
+    },{
+        image: diySurvey,
+        text: "DIY Surveys"
+    }];
 
-    const sliding_list=()=>{
-        const settings_list = {
-            dots: false,
-            infinite: false,
-            speed: 500,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            nextArrow: <img src={list_right} />,
-            prevArrow: <img src={list_left} />,
-        };
-
-        return (
-            <>
-                <ul className="online_level_five_unordered_list" >
-                    <Slider {...settings_list}>
-                        <div className="online_level_five_unordered_list_item">
-                            <li>Innovative Data Collection Technologies</li>
-                        </div>
-                        <div className="online_level_five_unordered_list_item">
-                            <li>Advance Sampling Technologies</li>
-                        </div>
-                        <div className="online_level_five_unordered_list_item">
-                            <li>Customised Survey Design</li>
-                        </div>
-                        <div className="online_level_five_unordered_list_item">
-                            <li>Comprehensive Data Analysis</li>
-                        </div>
-                        <div className="online_level_five_unordered_list_item">
-                            <li>Actionable Reporting & Visualisation</li>
-                        </div>
-                    </Slider>
-                </ul>
-            </>
-        )
-    }
-
-    const responsive = {
-        0: { items: 1 },
-        568: { items: 2 },
-        1024: { items: 3 },
-    };
-
-    const items = [
-        <div className="item" data-value="1" onClick={()=>{
-            window.location.replace("/services/onlinesurveys");
-        }}>
-            <img src={onlinesurvey} alt="online_surveuy" />
-            <p>Online Surveys</p>
-        </div>,
-        <div className="item" data-value="2" onClick={()=>{
-            window.location.replace("/services/diysurveys");
-        }}>
-            <img src={diy} alt="DIY" />
-            <p>DIY Surveys</p>
-        </div>,
-        <div className="item" data-value="3" onClick={()=>{
-            window.location.replace("/services/globalsurveys");
-        }}>
-            <img src={global} alt="global" />
-            <p>Global Sample</p>
-        </div>,
-        <div className="item" data-value="4" onClick={()=>{
-            window.location.replace("/services/endtoendsurveys");
-        }}>
-            <img src={endtoend} alt="endtoend" />
-            <p>End to End Surveys</p>
-        </div>,
-        <div className="item" data-value="5" onClick={()=>{
-            window.location.replace("/services/globalqunatitativesurveys");
-        }}>
-            <img src={quantative} alt="quantitative" />
-            <p>Global Quantitative Sample</p>
-        </div>,
-    ];
+    const quesAnsHeadings=["Benefits of", " online survey"];
+    const quesAndData=[{
+        ques: "What are the benefits of reputation management software?",
+        ans:  "In the digital era we live in, the internet has completely reshaped the way businesses interact with their customers. Customers are increasingly turning to online reviews and social media to voice their opinions and make purchasing decisions. As such, the reputation of a business online has never been more important, and this is where reputation management software comes into play..",
+    },{
+        ques: "Eliminates manual data collection",
+        ans: "In the dynamic business landscape, using reputation management software offers several key advantages. One of the most significant is the elimination of manual data collection. The software automates the process of gathering reviews, comments, and feedback from various online platforms, freeing up valuable time and resources that can be better utilized elsewhere.",
+    },{
+        ques: "Get real-time insights?",
+        ans: "Another benefit is the ability to gain real-time insights. The software provides an ongoing, live snapshot of your company's online reputation, enabling you to react quickly to any changes or trends. This means you can address negative feedback promptly or capitalize on positive comments without delay.",
+    },{
+        ques: "You can reach more people, faster and easier?",
+        ans:  "Reputation management software enables you to reach a broader audience more rapidly and easily. With the software's ability to monitor multiple platforms simultaneously, you can engage with a larger number of people. It also simplifies the process of responding to reviews and comments, making it quicker and easier to maintain a positive online presence and build strong relationships with your customers."
+    }]
     
     return (
         <div className="main_body">
             <div className="level_one">
                 <img src={banner} alt="bannerImg" />
             </div>
-            <div className="level_two">
-                <h1>Online survey made</h1>
-                <h1>smarter, faster, easier</h1>
-            </div>
-            <div className="level_three">
-                <div className="Card_box">
-                    {Array.isArray(arrCard) && arrCard.map((card, index)=>{
-                        console.log("Index===>", index);
-                        let i= index>cardImg.length-1 ? index%cardImg.length : index
-                            console.log("Index for the array of images", i)
-                            return(
-                                <div className="cards" key={index} id={`id${index}`}>
-                                    <img src={cardImg[i]} alt="card_image" />
-                                    <h1>{card.heading}</h1>
-                                    <p>{card.text}</p>
-                                </div>
-                            )
-                        })}
-                </div>
-            </div>
+            <Cards cardsHeadings={cardsHeadings} cardsContent={cardsContent} />
             <div className="level_four">
                 <h1>Expertise to <span>support your success</span></h1>
                 <div className="level_four_sides">
                     <div className="left_side">
                             <h1>Tune in to every word, on every channel</h1>
-                            <p>mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus. Urna eget bibendum feugiat congue sed. Consectetur at a enim dictum tempus. Aliquet eget lorem duis scelerisque ipsum mauris augue et. Faucibus quis venenatis ultricies dignissim tincidunt sit nulla. Consequat condimentum enim bibendum dictum. Faucibus quis venenatis</p>
+                            <p>In this digitally connected world, every voice matters, and every channel counts. At Mirats Insights, we tune into every word on every channel. Our advanced data collection methods and analytical tools capture insights from various sources, giving you a holistic view of your target audience. With Mirats Insights, you gain a deeper understanding of your market, helping you stay ahead of the competition.</p>
                     </div>
                     <div className="right_side">
                         <div className="column_one">
@@ -197,142 +102,9 @@ const OnlineSurveys =()=>{
                     </div>
                 </div>
             </div>
-            <div className="level_five">
-                <h1>Our online survey <span>made approaches</span></h1>
-                <div className="online_level_five_sliding_parent">
-                    {sliding_list()}
-                </div>
-                <div className="level_five_section_part">
-                    <section>
-                        <img src={blue_boy} alt="blue_boy_img" />
-                    </section>
-                    <section>
-                        <div>
-                            <h1>Innovative <span>Data Collection Technologies</span></h1>
-                            <p>Feugiat egestas ut laoreet dolor lacinia eget nisi cursus. Maecenas elementum commodo tortor purus. Turpis sapien laoreet pharetra egestas morbi condimentum hendrerit neque. Auctor tincidunt elementum eleifend adipiscing purus. Cras nunc a tempor neque elit molestie malesuada diam morbi. Consequat aenean mi lacinia interdum eros ipsum dignissim amet pulvinar. Id ullamcorper at nisi venenatis urna nunc purus mi faucibus. Vitae aliquam pulvinar amet nulla rhoncus magna.</p>
-                            <h2>Benefits of using Mirats Insights -</h2>
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet consectetur Gravida malesua egestas a egestas.</li>
-                                <li>Quis justo quisque purus at et Lorem  purus. </li>
-                                <li>Massa eget elementum nunc semper. Eu laoreet mattis nec ullamcorper nunc Semper sed .</li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <div className="level_six">
-                <p>Upcoming Surveys</p>
-                <h1>Your favourite upcoming </h1>
-                <h2>quantitative solution </h2>
-                <div className="online_survey_level_six_parent">
-                    <AliceCarousel
-                        autoPlayStrategy="none"
-                        animationDuration={700}
-                        animationType="fadeout"
-                        infinite
-                        touchTracking={false}
-                        disableDotsControls
-                        buttonsDisabled
-                        items={items}
-                        responsive={responsive}
-                        mouseTracking
-                        controlsStrategy="alternate"
-                    />
-                </div>
-            </div>
-            <div className="level_seven">
-                <p>Benefits of<span> online survey</span></p>
-                <div className="level_sevel_faq">
-          <section>
-            <h5>What are the benefits of reputation management software?</h5>
-            <img
-              src={ques1 ? cross : plus}
-              alt="image"
-              onClick={() => {
-                setQues1(!ques1);
-              }}
-            />
-          </section>
-          {ques1 ? (
-            <p>
-              Reputation management software offers businesses the ability to
-              monitor their online presence, track customer feedback, and
-              address issues promptly. By maintaining a positive brand
-              perception, businesses can build trust, improve customer
-              satisfaction, and enhance their online reputation, leading to
-              increased credibility and business success.
-            </p>
-          ) : (
-            <></>
-          )}
-          <section>
-            <h5>Eliminates manual data collection</h5>
-            <img
-              src={ques2 ? cross : plus}
-              alt="image"
-              onClick={() => {
-                setQues2(!ques2);
-              }}
-            />
-          </section>
-          {ques2 ? (
-            <p>
-              Reputation management software offers businesses the ability to
-              monitor their online presence, track customer feedback, and
-              address issues promptly. By maintaining a positive brand
-              perception, businesses can build trust, improve customer
-              satisfaction, and enhance their online reputation, leading to
-              increased credibility and business success.
-            </p>
-          ) : (
-            <></>
-          )}
-          <section>
-            <h5>Get real-time insights</h5>
-            <img
-              src={ques3 ? cross : plus}
-              alt="image"
-              onClick={() => {
-                setQues3(!ques3);
-              }}
-            />
-          </section>
-          {ques3 ? (
-            <p>
-              Reputation management software offers businesses the ability to
-              monitor their online presence, track customer feedback, and
-              address issues promptly. By maintaining a positive brand
-              perception, businesses can build trust, improve customer
-              satisfaction, and enhance their online reputation, leading to
-              increased credibility and business success.
-            </p>
-          ) : (
-            <></>
-          )}
-          <section>
-          <h5>You can reach more people, faster and easier</h5>
-          <img
-            src={ques4 ? cross : plus}
-            alt="image"
-            onClick={() => {
-              setQues4(!ques4);
-            }}
-          />
-        </section>
-        {ques4 ? (
-          <p>
-            Reputation management software offers businesses the ability to
-            monitor their online presence, track customer feedback, and
-            address issues promptly. By maintaining a positive brand
-            perception, businesses can build trust, improve customer
-            satisfaction, and enhance their online reputation, leading to
-            increased credibility and business success.
-          </p>
-        ) : (
-          <></>
-        )}
-        </div>
-            </div>
+            <Listing content={content} image={listingImg1} />
+            <SlidingShow slidingHeading={slidingHeading} slidingSurveys={slidingSurveys}/>
+            <QuestionAnswer quesAnsHeadings={quesAnsHeadings} quesAndData={quesAndData}/>
         </div>
     )
 }

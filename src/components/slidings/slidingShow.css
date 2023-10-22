@@ -1,0 +1,50 @@
+body{
+    background: #F0F0F0;
+}
+.slidng_show_body{
+    padding: 60px;
+    color: #F0F0F0;
+    font-family: Pretendard;
+    background: linear-gradient(315deg, #1F1F1F 0%, #333 100%);
+}
+.slidng_show_body p{
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
+}
+.slidng_show_body h2{
+    width: 50%;
+    margin: 0 auto 60px auto;
+    color: #F0F0F0;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+}
+.slidng_show_body h2 span{
+    color: #B5B5B5;
+}
+.react-multi-carousel-item--active{
+    width: 400px !important;
+    margin: auto 30px !important;
+    border-radius: 8px;
+    background: #FFF;
+}
+.sliding_show_cards_child{
+    cursor: pointer;
+}
+.sliding_show_cards_child img{
+    width: 100%;
+}
+.sliding_show_cards_child h3{
+    margin: 24px;
+    color: #333;
+    font-size: 20px;
+    font-style: normal;
+    text-align: left;
+    font-weight: 600;
+    line-height: 120%; 
+}

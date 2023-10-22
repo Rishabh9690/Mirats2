@@ -1,169 +1,44 @@
 import React, { useEffect, useState } from "react";
-import banner from "./images/Banner.png";
-import hand_clock from "../../services/service_img/hand_clock.svg";
-import star_chat from "../../services/service_img/star_chat.svg";
-import setting from "../../services/service_img/setting.svg";
-import image1 from "./images/image1.png";
-import image2 from "./images/image2.png";
+import banner from "../../images/banners/media.png";
+import Cards from "../../cards/Cards.js";
+import SlidingModals from "../../slidingModals/SlidingModals.js";
+import ServeCards from "../../serveCards/ServeCards.js";
+import Listing from "../../listing/Listing.js";
+import listing2 from "../../images/images/listingImg2.png"
+import image1 from "../../images/images/image1.png";
+import image2 from "../../images/images/image2.png";
 import plus from "./images/plus.png";
-import imageModal1 from "./images/imageModal1.png";
-import imageModal2 from "./images/imageModal2.png";
-import imageModal3 from "./images/imageModal3.png";
-import remove from "../../mirats_qual_services/in_personal/images/Remove.svg";
-import right from "../../services/service_img/right.svg";
-import image_list_sec from "../../mirats_special_solutions/recruitment/images/image_list_sec.svg";
-import blogimage1 from "../bloAndArticles/blogImages/blogImage1.png";
-import blogimage2 from "../bloAndArticles/blogImages/blogImage2.png";
-import blogimage3 from "../bloAndArticles/blogImages/blogImage3.png";
-import blogimage4 from "../bloAndArticles/blogImages/blogImage4.png";
-import BlogAndArticle from "../bloAndArticles/BlogAndArticle";
-import AliceCarousel from "react-alice-carousel";
-import "react-alice-carousel/lib/alice-carousel.css";
-import Modal from "react-modal";
-import { Link, useNavigate } from "react-router-dom";
+import blogimage1 from "../../images/images/blogImage1.png";
+import blogimage2 from "../../images/images/blogImage2.png";
+import blogimage3 from "../../images/images/blogImage3.png";
+import blogimage4 from "../../images/images/blogImage4.png";
+import slidingModalImg1 from "../../images/images/slidingModalImg1.png";
+import slidingModalImg2 from "../../images/images/slidingModalImg2.png";
+import slidingModalImg3 from "../../images/images/slidingModalImg3.png";
+import slidingModalImg4 from "../../images/images/slidingModalImg4.png";
+import slidingModalImg5 from "../../images/images/slidingModalImg5.png";
+import { Link } from "react-router-dom";
 import "./mediaAndTechnology.css";
 
 const MediaAndTechnology = ({ blogs }) => {
-  const [cardIcons, setCardIcons] = useState([]);
-  const [cards, setCards] = useState([]);
   const [status1, setStattus1] = useState(true);
   const [status2, setStattus2] = useState(true);
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [modalData, setModalData] = useState({});
-  const [gridCards, setGridCards] = useState([]);
-  // const [blog, setBlog] = useState({});
-  const [index, setIndex] =useState(0);
-  // console.log("blog", blog);
 
-  // use navigate
-  const navigate = useNavigate();
+  const cardsHeadings = [{
+    heading1: "Essential characteristics of effective ",
+    heading2: "DIY survey platforms",
+  }]
+  const cardsContent = [{
+    cardHeading: "User-Friendly Interface",
+    cardText: "The platform should be intuitive and easy to navigate. Users should be able to create surveys without difficulty, customize them as desired, and distribute them with just a few clicks. The interface should also be appealing and well-organized, making the process of survey creation and analysis enjoyable and efficient.",
+  }, {
+    cardHeading: "Customization and Flexibility",
+    cardText: "An effective DIY survey platform should provide a range of customization options to ensure the survey meets the specific needs of the user. This could include a variety of question types (multiple choice, rating scale, open-ended), options for branding and design elements, and flexibility in distribution methods (email, social media, website embed)."
+  }, {
+    cardHeading: "Powerful Analytical Tools",
+    cardText: "After the survey is conducted, users need tools to make sense of the data. A good DIY survey platform should offer robust data analysis tools. These could include real-time reporting, data visualization options (like graphs and charts), cross-tabulation for more complex analysis, and data export options for further processing in other software."
+  }]
 
-  // const handleLearnMoreClick = (element) => {
-  //   navigate({
-  //     pathname: "/industry/blogsandarticles",
-  //     state: { blogData: element }
-  //   });
-  // };
-
-
-  useEffect(() => {
-    setCardIcons([hand_clock, star_chat, setting]);
-    setCards([
-      {
-        heading: `Unparalleled Access to Global Respondents`,
-        text: `mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus.
-            Urna eget bibendum feugiat congue sed. Consectetur at a enim dictum tempus. Aliquet eget lorem duis scelerisque ipsum mauris augue et. Faucibus quis venenatis ultricies dignissim tincidunt sit nulla. Consequat condimentum enim bibendum dictum. Faucibus quis venenatis `,
-      },
-      {
-        heading: `Delivery at the Speed of Market`,
-        text: ` in ornare feugiat sit tristique nibh. Neque sit ac lacinia eu. Neque consectetur enim placerat duis phasellus. Facilisis mauris nulla mi placerat. Magnis interdum nisl felis fames velit odio. Scelerisque commodo nulla vitae neque sit aliquam at commodo eu. Maecenas proin nulla mauris sit dui faucibus at vestibulum. Consequat pellentesque tincidunt neque cursus hac.`,
-      },
-      {
-        heading: `Choose Self-Serve to Full-Service Research Support`,
-        text: `proin nulla mauris sit dui faucibus at vestibulum. Consequat pellentesque tincidunt neque cursus hac. In vel neque blandit amet nunc urna duis. Consequat nulla feugiat lectus amet turpis sed. Proin iaculis feugiat massa risus amet nulla. Elementum mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus.`,
-      },
-    ]);
-    setGridCards([
-      {
-        heading: "Sustainable strategy & governance",
-        text: `mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus.
-        Urna eget bibendum feugiat congue sed. Consectetur at a enim dictum tempus. `,
-      },
-      {
-        heading: "ESG target operating model & data",
-        text: `mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus.
-        Urna eget bibendum feugiat congue sed. Consectetur at a enim dictum tempus. `,
-      },
-      {
-        heading: "Regulatory compliance & disclosures",
-        text: `mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus.
-        Urna eget bibendum feugiat congue sed. Consectetur at a enim dictum tempus. `,
-      },
-      {
-        heading: "New products & client engagements",
-        text: `mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus.
-        Urna eget bibendum feugiat congue sed. Consectetur at a enim dictum tempus. `,
-      },
-      {
-        heading: "ESG target operating model & data",
-        text: `mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus.
-        Urna eget bibendum feugiat congue sed. Consectetur at a enim dictum tempus. `,
-      },
-      {
-        heading: "Regulatory compliance & disclosures",
-        text: `mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus.
-        Urna eget bibendum feugiat congue sed. Consectetur at a enim dictum tempus. `,
-      },
-    ]);
-  }, []);
-
-  const modalArr = [
-    {
-      image: imageModal1,
-      heading: "Communication consulting",
-      text: `Lorem ipsum dolor sit amet consectetur. Cursus viverra augue est nisl. Gravida sem malesuada egestas justo. Integer mattis eget lorem feugiat. Fringilla enim interdum egestas iaculis sit neque duis nulla viverra. Massa felis vestibulum nunc nulla fringilla eleifend erat. Sed quis laoreet amet arcu. Accumsan metus in egestas eu ornare odio tincidunt in donec. Elit tristique mi dui pretium vel amet interdum massa morbi. Enim cursus neque interdum iaculis pellentesque facilisis vestibulum. Nibh adipiscing aliquam consequat volutpat augue augue. Tellus quis velit ut tortor semper augue proin. Cursus dolor blandit imperdiet cras lacus volutpat. Senectus gravida elementum porttitor ut.
-Amet purus eget integer praesent ipsum. Aliquam volutpat sit ultrices neque. Pharetra non tellus sit magna amet at egestas. Congue volutpat commodo dui maecenas quis aliquam mauris nibh eu. Sit congue nibh convallis nibh metus purus augue. Venenatis sapien aliquam vehicula mattis egestas ipsum eu. Mattis tempus aliquam tempor tempor dictum cum. Tellus morbi nec aliquam fringilla vel. Aliquet ipsum aliquam quam neque. Tristique imperdiet adipiscing ut turpis. Eu quis diam fermentum tellus nunc morbi mollis consequat. Tincidunt nibh ac eget eu. Turpis eleifend placerat metus tincidunt dignissim habitant tincidunt. Viverra risus justo senectus risus amet. In sit ut posuere lorem. 
-Sit vitae non rhoncus eget massa. Elementum nec sit risus et lobortis. Duis nec purus non netus enim gravida dignissim metus. Eget sed blandit a dignissim diam pulvinar id nulla. Ornare in sit enim cursus non vitae condimentum habitasse. Lorem amet mi sed libero. Ut sit sed semper suspendisse. Est senectus amet non felis gravida leo sapien mattis. A cum mattis mi netus maecenas amet. Parturient orci donec suscipit nec adipiscing nec. Sed nibh adipiscing tincidunt pharetra aliquet amet. Fermentum libero adipiscing id malesuada massa platea.
-Nulla pellentesque viverra mi risus. Quisque urna tortor nisi facilisi maecenas. Tellus tincidunt at accumsan id sed bibendum ut mauris. Vitae sit cum turpis fringilla eu ullamcorper. Etiam sagittis amet vestibulum risus fermentum a a sollicitudin nulla. Vitae volutpat pellentesque sed vel pharetra eleifend nulla. Suspendisse id venenatis elit quam viverra faucibus ullamcorper metus. Risus purus aliquet cum placerat posuere fringilla lorem consequat quisque. Enim consectetur sed volutpat lacus cursus. Nec urna ipsum orci eu dui. Gravida montes proin tincidunt sed integer. Lorem gravida habitasse eu elementum venenatis placerat bibendum dignissim et.`,
-    },
-    {
-      image: imageModal2,
-      heading: "Media consulting",
-      text: `Lorem ipsum dolor sit amet consectetur. Cursus viverra augue est nisl. Gravida sem malesuada egestas justo. Integer mattis eget lorem feugiat. Fringilla enim interdum egestas iaculis sit neque duis nulla viverra. Massa felis vestibulum nunc nulla fringilla eleifend erat. Sed quis laoreet amet arcu. Accumsan metus in egestas eu ornare odio tincidunt in donec. Elit tristique mi dui pretium vel amet interdum massa morbi. Enim cursus neque interdum iaculis pellentesque facilisis vestibulum. Nibh adipiscing aliquam consequat volutpat augue augue. Tellus quis velit ut tortor semper augue proin. Cursus dolor blandit imperdiet cras lacus volutpat. Senectus gravida elementum porttitor ut.
-Amet purus eget integer praesent ipsum. Aliquam volutpat sit ultrices neque. Pharetra non tellus sit magna amet at egestas. Congue volutpat commodo dui maecenas quis aliquam mauris nibh eu. Sit congue nibh convallis nibh metus purus augue. Venenatis sapien aliquam vehicula mattis egestas ipsum eu. Mattis tempus aliquam tempor tempor dictum cum. Tellus morbi nec aliquam fringilla vel. Aliquet ipsum aliquam quam neque. Tristique imperdiet adipiscing ut turpis. Eu quis diam fermentum tellus nunc morbi mollis consequat. Tincidunt nibh ac eget eu. Turpis eleifend placerat metus tincidunt dignissim habitant tincidunt. Viverra risus justo senectus risus amet. In sit ut posuere lorem. 
-Sit vitae non rhoncus eget massa. Elementum nec sit risus et lobortis. Duis nec purus non netus enim gravida dignissim metus. Eget sed blandit a dignissim diam pulvinar id nulla. Ornare in sit enim cursus non vitae condimentum habitasse. Lorem amet mi sed libero. Ut sit sed semper suspendisse. Est senectus amet non felis gravida leo sapien mattis. A cum mattis mi netus maecenas amet. Parturient orci donec suscipit nec adipiscing nec. Sed nibh adipiscing tincidunt pharetra aliquet amet. Fermentum libero adipiscing id malesuada massa platea.
-Nulla pellentesque viverra mi risus. Quisque urna tortor nisi facilisi maecenas. Tellus tincidunt at accumsan id sed bibendum ut mauris. Vitae sit cum turpis fringilla eu ullamcorper. Etiam sagittis amet vestibulum risus fermentum a a sollicitudin nulla. Vitae volutpat pellentesque sed vel pharetra eleifend nulla. Suspendisse id venenatis elit quam viverra faucibus ullamcorper metus. Risus purus aliquet cum placerat posuere fringilla lorem consequat quisque. Enim consectetur sed volutpat lacus cursus. Nec urna ipsum orci eu dui. Gravida montes proin tincidunt sed integer. Lorem gravida habitasse eu elementum venenatis placerat bibendum dignissim et.`,
-    },
-    {
-      image: imageModal3,
-      heading: "Technology consulting",
-      text: `Lorem ipsum dolor sit amet consectetur. Cursus viverra augue est nisl. Gravida sem malesuada egestas justo. Integer mattis eget lorem feugiat. Fringilla enim interdum egestas iaculis sit neque duis nulla viverra. Massa felis vestibulum nunc nulla fringilla eleifend erat. Sed quis laoreet amet arcu. Accumsan metus in egestas eu ornare odio tincidunt in donec. Elit tristique mi dui pretium vel amet interdum massa morbi. Enim cursus neque interdum iaculis pellentesque facilisis vestibulum. Nibh adipiscing aliquam consequat volutpat augue augue. Tellus quis velit ut tortor semper augue proin. Cursus dolor blandit imperdiet cras lacus volutpat. Senectus gravida elementum porttitor ut.
-Amet purus eget integer praesent ipsum. Aliquam volutpat sit ultrices neque. Pharetra non tellus sit magna amet at egestas. Congue volutpat commodo dui maecenas quis aliquam mauris nibh eu. Sit congue nibh convallis nibh metus purus augue. Venenatis sapien aliquam vehicula mattis egestas ipsum eu. Mattis tempus aliquam tempor tempor dictum cum. Tellus morbi nec aliquam fringilla vel. Aliquet ipsum aliquam quam neque. Tristique imperdiet adipiscing ut turpis. Eu quis diam fermentum tellus nunc morbi mollis consequat. Tincidunt nibh ac eget eu. Turpis eleifend placerat metus tincidunt dignissim habitant tincidunt. Viverra risus justo senectus risus amet. In sit ut posuere lorem. 
-Sit vitae non rhoncus eget massa. Elementum nec sit risus et lobortis. Duis nec purus non netus enim gravida dignissim metus. Eget sed blandit a dignissim diam pulvinar id nulla. Ornare in sit enim cursus non vitae condimentum habitasse. Lorem amet mi sed libero. Ut sit sed semper suspendisse. Est senectus amet non felis gravida leo sapien mattis. A cum mattis mi netus maecenas amet. Parturient orci donec suscipit nec adipiscing nec. Sed nibh adipiscing tincidunt pharetra aliquet amet. Fermentum libero adipiscing id malesuada massa platea.
-Nulla pellentesque viverra mi risus. Quisque urna tortor nisi facilisi maecenas. Tellus tincidunt at accumsan id sed bibendum ut mauris. Vitae sit cum turpis fringilla eu ullamcorper. Etiam sagittis amet vestibulum risus fermentum a a sollicitudin nulla. Vitae volutpat pellentesque sed vel pharetra eleifend nulla. Suspendisse id venenatis elit quam viverra faucibus ullamcorper metus. Risus purus aliquet cum placerat posuere fringilla lorem consequat quisque. Enim consectetur sed volutpat lacus cursus. Nec urna ipsum orci eu dui. Gravida montes proin tincidunt sed integer. Lorem gravida habitasse eu elementum venenatis placerat bibendum dignissim et.`,
-    },
-  ];
-  const useModal = (e) => {
-    e.preventDefault();
-    const index = Number(e.currentTarget.id);
-    console.log("Here is the code==========>", index);
-
-    setModalData({
-      image: modalArr[index].image,
-      heading: modalArr[index].heading,
-      text: modalArr[index].text,
-    });
-    handleModalOpen();
-  };
-  const handleModalOpen = () => {
-    console.log("Inside the handleModalOpen");
-    setModalIsOpen(true);
-  };
-  const handleModalClose = () => {
-    console.log("Inside the handleModalClose");
-    setModalIsOpen(false);
-    // onRequestClose
-  };
-  const responsive = {
-    0: { items: 1 },
-    568: { items: 2 },
-    1024: { items: 3 },
-  };
-
-  const items = [
-    <div className="item" data-value="1" id={0} onClick={useModal}>
-      <img src={modalArr[0].image} alt="image1" />
-      <h2>{modalArr[0].heading}</h2>
-    </div>,
-    <div className="item" data-value="2" id={1} onClick={useModal}>
-      <img src={modalArr[1].image} alt="image2" />
-      <h2>{modalArr[1].heading}</h2>
-    </div>,
-    <div className="item" data-value="3" id={2} onClick={useModal}>
-      <img src={modalArr[2].image} alt="image3" />
-      <h2>{modalArr[2].heading}</h2>
-    </div>,
-  ];
 
   const blogsMap = [
     {
@@ -251,34 +126,81 @@ Nulla pellentesque viverra mi risus. Quisque urna tortor nisi facilisi maecenas.
     Fusce dignissim neque eu at nam faucibus risus ipsum volutpat. Tellus amet at a nibh. Sagittis cras aliquet metus feugiat pretium et eget. At diam suspendisse elementum sit convallis duis gravida. Pulvinar felis sagittis erat tincidunt ultricies arcu pellentesque quisque. Augue cursus elementum luctus nam. `,
     },
   ];
+  const slidingModalHeading = ["Why use", "mirats insights ? "]
+
+  const slidingModalData = [{
+    image: slidingModalImg1,
+    heading: "Cost-effective research solution",
+    text: `Lorem ipsum dolor sit amet consectetur. Cursus viverra augue est nisl. Gravida sem malesuada egestas justo. Integer mattis eget lorem feugiat. Fringilla enim interdum egestas iaculis sit neque duis nulla viverra. Massa felis vestibulum nunc nulla fringilla eleifend erat. Sed quis laoreet amet arcu. Accumsan metus in egestas eu ornare odio tincidunt in donec. Elit tristique mi dui pretium vel amet interdum massa morbi. Enim cursus neque interdum iaculis pellentesque facilisis vestibulum. Nibh adipiscing aliquam consequat volutpat augue augue. Tellus quis velit ut tortor semper augue proin. Cursus dolor blandit imperdiet cras lacus volutpat. Senectus gravida elementum porttitor ut.
+          Amet purus eget integer praesent ipsum. Aliquam volutpat sit ultrices neque. Pharetra non tellus sit magna amet at egestas. Congue volutpat commodo dui maecenas quis aliquam mauris nibh eu. Sit congue nibh convallis nibh metus purus augue. Venenatis sapien aliquam vehicula mattis egestas ipsum eu. Mattis tempus aliquam tempor tempor dictum cum. Tellus morbi nec aliquam fringilla vel. Aliquet ipsum aliquam quam neque. Tristique imperdiet adipiscing ut turpis. Eu quis diam fermentum tellus nunc morbi mollis consequat. Tincidunt nibh ac eget eu. Turpis eleifend placerat metus tincidunt dignissim habitant tincidunt. Viverra risus justo senectus risus amet. In sit ut posuere lorem. 
+          Sit vitae non rhoncus eget massa. Elementum nec sit risus et lobortis. Duis nec purus non netus enim gravida dignissim metus. Eget sed blandit a dignissim diam pulvinar id nulla. Ornare in sit enim cursus non vitae condimentum habitasse. Lorem amet mi sed libero. Ut sit sed semper suspendisse. Est senectus amet non felis gravida leo sapien mattis. A cum mattis mi netus maecenas amet. Parturient orci donec suscipit nec adipiscing nec. Sed nibh adipiscing tincidunt pharetra aliquet amet. Fermentum libero adipiscing id malesuada massa platea.
+          Nulla pellentesque viverra mi risus. Quisque urna tortor nisi facilisi maecenas. Tellus tincidunt at accumsan id sed bibendum ut mauris. Vitae sit cum turpis fringilla eu ullamcorper. Etiam sagittis amet vestibulum risus fermentum a a sollicitudin nulla. Vitae volutpat pellentesque sed vel pharetra eleifend nulla. Suspendisse id venenatis elit quam viverra faucibus ullamcorper metus. Risus purus aliquet cum placerat posuere fringilla lorem consequat quisque. Enim consectetur sed volutpat lacus cursus. Nec urna ipsum orci eu dui. Gravida montes proin tincidunt sed integer. Lorem gravida habitasse eu elementum venenatis placerat bibendum dignissim et.`
+  }, {
+    image: slidingModalImg2,
+    heading: "Geographical flexibiltiy",
+    text: `Lorem ipsum dolor sit amet consectetur. Cursus viverra augue est nisl. Gravida sem malesuada egestas justo. Integer mattis eget lorem feugiat. Fringilla enim interdum egestas iaculis sit neque duis nulla viverra. Massa felis vestibulum nunc nulla fringilla eleifend erat. Sed quis laoreet amet arcu. Accumsan metus in egestas eu ornare odio tincidunt in donec. Elit tristique mi dui pretium vel amet interdum massa morbi. Enim cursus neque interdum iaculis pellentesque facilisis vestibulum. Nibh adipiscing aliquam consequat volutpat augue augue. Tellus quis velit ut tortor semper augue proin. Cursus dolor blandit imperdiet cras lacus volutpat. Senectus gravida elementum porttitor ut.
+          Amet purus eget integer praesent ipsum. Aliquam volutpat sit ultrices neque. Pharetra non tellus sit magna amet at egestas. Congue volutpat commodo dui maecenas quis aliquam mauris nibh eu. Sit congue nibh convallis nibh metus purus augue. Venenatis sapien aliquam vehicula mattis egestas ipsum eu. Mattis tempus aliquam tempor tempor dictum cum. Tellus morbi nec aliquam fringilla vel. Aliquet ipsum aliquam quam neque. Tristique imperdiet adipiscing ut turpis. Eu quis diam fermentum tellus nunc morbi mollis consequat. Tincidunt nibh ac eget eu. Turpis eleifend placerat metus tincidunt dignissim habitant tincidunt. Viverra risus justo senectus risus amet. In sit ut posuere lorem. 
+          Sit vitae non rhoncus eget massa. Elementum nec sit risus et lobortis. Duis nec purus non netus enim gravida dignissim metus. Eget sed blandit a dignissim diam pulvinar id nulla. Ornare in sit enim cursus non vitae condimentum habitasse. Lorem amet mi sed libero. Ut sit sed semper suspendisse. Est senectus amet non felis gravida leo sapien mattis. A cum mattis mi netus maecenas amet. Parturient orci donec suscipit nec adipiscing nec. Sed nibh adipiscing tincidunt pharetra aliquet amet. Fermentum libero adipiscing id malesuada massa platea.
+          Nulla pellentesque viverra mi risus. Quisque urna tortor nisi facilisi maecenas. Tellus tincidunt at accumsan id sed bibendum ut mauris. Vitae sit cum turpis fringilla eu ullamcorper. Etiam sagittis amet vestibulum risus fermentum a a sollicitudin nulla. Vitae volutpat pellentesque sed vel pharetra eleifend nulla. Suspendisse id venenatis elit quam viverra faucibus ullamcorper metus. Risus purus aliquet cum placerat posuere fringilla lorem consequat quisque. Enim consectetur sed volutpat lacus cursus. Nec urna ipsum orci eu dui. Gravida montes proin tincidunt sed integer. Lorem gravida habitasse eu elementum venenatis placerat bibendum dignissim et.`
+  }, {
+    image: slidingModalImg3,
+    heading: "Time efficiency",
+    text: `Lorem ipsum dolor sit amet consectetur. Cursus viverra augue est nisl. Gravida sem malesuada egestas justo. Integer mattis eget lorem feugiat. Fringilla enim interdum egestas iaculis sit neque duis nulla viverra. Massa felis vestibulum nunc nulla fringilla eleifend erat. Sed quis laoreet amet arcu. Accumsan metus in egestas eu ornare odio tincidunt in donec. Elit tristique mi dui pretium vel amet interdum massa morbi. Enim cursus neque interdum iaculis pellentesque facilisis vestibulum. Nibh adipiscing aliquam consequat volutpat augue augue. Tellus quis velit ut tortor semper augue proin. Cursus dolor blandit imperdiet cras lacus volutpat. Senectus gravida elementum porttitor ut.
+          Amet purus eget integer praesent ipsum. Aliquam volutpat sit ultrices neque. Pharetra non tellus sit magna amet at egestas. Congue volutpat commodo dui maecenas quis aliquam mauris nibh eu. Sit congue nibh convallis nibh metus purus augue. Venenatis sapien aliquam vehicula mattis egestas ipsum eu. Mattis tempus aliquam tempor tempor dictum cum. Tellus morbi nec aliquam fringilla vel. Aliquet ipsum aliquam quam neque. Tristique imperdiet adipiscing ut turpis. Eu quis diam fermentum tellus nunc morbi mollis consequat. Tincidunt nibh ac eget eu. Turpis eleifend placerat metus tincidunt dignissim habitant tincidunt. Viverra risus justo senectus risus amet. In sit ut posuere lorem. 
+          Sit vitae non rhoncus eget massa. Elementum nec sit risus et lobortis. Duis nec purus non netus enim gravida dignissim metus. Eget sed blandit a dignissim diam pulvinar id nulla. Ornare in sit enim cursus non vitae condimentum habitasse. Lorem amet mi sed libero. Ut sit sed semper suspendisse. Est senectus amet non felis gravida leo sapien mattis. A cum mattis mi netus maecenas amet. Parturient orci donec suscipit nec adipiscing nec. Sed nibh adipiscing tincidunt pharetra aliquet amet. Fermentum libero adipiscing id malesuada massa platea.
+          Nulla pellentesque viverra mi risus. Quisque urna tortor nisi facilisi maecenas. Tellus tincidunt at accumsan id sed bibendum ut mauris. Vitae sit cum turpis fringilla eu ullamcorper. Etiam sagittis amet vestibulum risus fermentum a a sollicitudin nulla. Vitae volutpat pellentesque sed vel pharetra eleifend nulla. Suspendisse id venenatis elit quam viverra faucibus ullamcorper metus. Risus purus aliquet cum placerat posuere fringilla lorem consequat quisque. Enim consectetur sed volutpat lacus cursus. Nec urna ipsum orci eu dui. Gravida montes proin tincidunt sed integer. Lorem gravida habitasse eu elementum venenatis placerat bibendum dignissim et.`
+  }, {
+    image: slidingModalImg4,
+    heading: "Skilled Moderators and interviewers ",
+    text: `Lorem ipsum dolor sit amet consectetur. Cursus viverra augue est nisl. Gravida sem malesuada egestas justo. Integer mattis eget lorem feugiat. Fringilla enim interdum egestas iaculis sit neque duis nulla viverra. Massa felis vestibulum nunc nulla fringilla eleifend erat. Sed quis laoreet amet arcu. Accumsan metus in egestas eu ornare odio tincidunt in donec. Elit tristique mi dui pretium vel amet interdum massa morbi. Enim cursus neque interdum iaculis pellentesque facilisis vestibulum. Nibh adipiscing aliquam consequat volutpat augue augue. Tellus quis velit ut tortor semper augue proin. Cursus dolor blandit imperdiet cras lacus volutpat. Senectus gravida elementum porttitor ut.
+          Amet purus eget integer praesent ipsum. Aliquam volutpat sit ultrices neque. Pharetra non tellus sit magna amet at egestas. Congue volutpat commodo dui maecenas quis aliquam mauris nibh eu. Sit congue nibh convallis nibh metus purus augue. Venenatis sapien aliquam vehicula mattis egestas ipsum eu. Mattis tempus aliquam tempor tempor dictum cum. Tellus morbi nec aliquam fringilla vel. Aliquet ipsum aliquam quam neque. Tristique imperdiet adipiscing ut turpis. Eu quis diam fermentum tellus nunc morbi mollis consequat. Tincidunt nibh ac eget eu. Turpis eleifend placerat metus tincidunt dignissim habitant tincidunt. Viverra risus justo senectus risus amet. In sit ut posuere lorem. 
+          Sit vitae non rhoncus eget massa. Elementum nec sit risus et lobortis. Duis nec purus non netus enim gravida dignissim metus. Eget sed blandit a dignissim diam pulvinar id nulla. Ornare in sit enim cursus non vitae condimentum habitasse. Lorem amet mi sed libero. Ut sit sed semper suspendisse. Est senectus amet non felis gravida leo sapien mattis. A cum mattis mi netus maecenas amet. Parturient orci donec suscipit nec adipiscing nec. Sed nibh adipiscing tincidunt pharetra aliquet amet. Fermentum libero adipiscing id malesuada massa platea.
+          Nulla pellentesque viverra mi risus. Quisque urna tortor nisi facilisi maecenas. Tellus tincidunt at accumsan id sed bibendum ut mauris. Vitae sit cum turpis fringilla eu ullamcorper. Etiam sagittis amet vestibulum risus fermentum a a sollicitudin nulla. Vitae volutpat pellentesque sed vel pharetra eleifend nulla. Suspendisse id venenatis elit quam viverra faucibus ullamcorper metus. Risus purus aliquet cum placerat posuere fringilla lorem consequat quisque. Enim consectetur sed volutpat lacus cursus. Nec urna ipsum orci eu dui. Gravida montes proin tincidunt sed integer. Lorem gravida habitasse eu elementum venenatis placerat bibendum dignissim et.`
+  }, {
+    image: slidingModalImg5,
+    heading: "Data analysis and reporting ",
+    text: `Lorem ipsum dolor sit amet consectetur. Cursus viverra augue est nisl. Gravida sem malesuada egestas justo. Integer mattis eget lorem feugiat. Fringilla enim interdum egestas iaculis sit neque duis nulla viverra. Massa felis vestibulum nunc nulla fringilla eleifend erat. Sed quis laoreet amet arcu. Accumsan metus in egestas eu ornare odio tincidunt in donec. Elit tristique mi dui pretium vel amet interdum massa morbi. Enim cursus neque interdum iaculis pellentesque facilisis vestibulum. Nibh adipiscing aliquam consequat volutpat augue augue. Tellus quis velit ut tortor semper augue proin. Cursus dolor blandit imperdiet cras lacus volutpat. Senectus gravida elementum porttitor ut.
+          Amet purus eget integer praesent ipsum. Aliquam volutpat sit ultrices neque. Pharetra non tellus sit magna amet at egestas. Congue volutpat commodo dui maecenas quis aliquam mauris nibh eu. Sit congue nibh convallis nibh metus purus augue. Venenatis sapien aliquam vehicula mattis egestas ipsum eu. Mattis tempus aliquam tempor tempor dictum cum. Tellus morbi nec aliquam fringilla vel. Aliquet ipsum aliquam quam neque. Tristique imperdiet adipiscing ut turpis. Eu quis diam fermentum tellus nunc morbi mollis consequat. Tincidunt nibh ac eget eu. Turpis eleifend placerat metus tincidunt dignissim habitant tincidunt. Viverra risus justo senectus risus amet. In sit ut posuere lorem. 
+          Sit vitae non rhoncus eget massa. Elementum nec sit risus et lobortis. Duis nec purus non netus enim gravida dignissim metus. Eget sed blandit a dignissim diam pulvinar id nulla. Ornare in sit enim cursus non vitae condimentum habitasse. Lorem amet mi sed libero. Ut sit sed semper suspendisse. Est senectus amet non felis gravida leo sapien mattis. A cum mattis mi netus maecenas amet. Parturient orci donec suscipit nec adipiscing nec. Sed nibh adipiscing tincidunt pharetra aliquet amet. Fermentum libero adipiscing id malesuada massa platea.
+          Nulla pellentesque viverra mi risus. Quisque urna tortor nisi facilisi maecenas. Tellus tincidunt at accumsan id sed bibendum ut mauris. Vitae sit cum turpis fringilla eu ullamcorper. Etiam sagittis amet vestibulum risus fermentum a a sollicitudin nulla. Vitae volutpat pellentesque sed vel pharetra eleifend nulla. Suspendisse id venenatis elit quam viverra faucibus ullamcorper metus. Risus purus aliquet cum placerat posuere fringilla lorem consequat quisque. Enim consectetur sed volutpat lacus cursus. Nec urna ipsum orci eu dui. Gravida montes proin tincidunt sed integer. Lorem gravida habitasse eu elementum venenatis placerat bibendum dignissim et.`
+  }]
+  const content = [{
+    heading1: "Our online survey ",
+    heading2: "made approaches",
+    lists: ["Innovative Data Collection Technologies", "Advance Sampling Technologies", "Customised Survey Design", "Comprehensive Data Analysis"],
+    sectionHeading1: "Innovative ",
+    sectionHeading2: "Data Collection Technologiess",
+    sectionText: "Mirats Insights is a forerunner in implementing innovative data collection technologies in our online surveys. We harness the power of advanced technologies, from AI-enhanced analytics to real-time data gathering methods, to ensure we capture diverse and thorough insights for our clients. Our tech-driven approach to data collection equips us with versatility and efficiency, making our market research services stand out in the industry.",
+    sectionListHeading: "Benefits of using Mirats Insights -",
+    sectionListPoints: ["Data Reliability and Precision: Our advanced data collection technologies ensure the collection of high-quality, trustworthy data.", "Scalability: The innovative technologies we use allow for scalability, meaning we can handle projects of any size or complexity effectively."],
+  }]
+  const serveCardsHeading = ["Where we serve", " in ornare feugiat sit tristique nibh. Neque sit ac lacinia eu. Neque consectetur enim placerat duis phasellus. Facilisis mauris nulla mi placerat. Magnis interdum nisl felis fames velit odio. Scelerisque commodo nulla vitae neque sit aliquam at commodo eu. "];
+  const serveCardsArr = [{
+    title: "Agribusiness",
+    text: `mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus.
+    Urna eget bibendum feugiat congue sed. Consectetur at a enim dictum tempus. `,
+  }, {
+    title: "Beauty",
+    text: `mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus.
+    Urna eget bibendum feugiat congue sed. Consectetur at a enim dictum tempus. `,
+  }, {
+    title: "Beverages",
+    text: `mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus.
+    Urna eget bibendum feugiat congue sed. Consectetur at a enim dictum tempus. `,
+  }, {
+    title: "Food",
+    text: `mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus.
+    Urna eget bibendum feugiat congue sed. Consectetur at a enim dictum tempus. `,
+  }, {
+    title: "Home and personal care",
+    text: `mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus.
+    Urna eget bibendum feugiat congue sed. Consectetur at a enim dictum tempus. `,
+  }]
 
   return (
     <div className="media_tech_body">
       <img src={banner} alt="banner" />
-      <div className="media_tech_level_two">
-        <div className="media_tech_level_two_heading">
-          <h2>
-            Harness the power of <span>Research Technology Provider</span>
-          </h2>
-        </div>
-        <div className="media_tech_level_two_heading_card_parent">
-          {cards.map((card, index) => {
-            let i =
-              index <= cardIcons.length - 1 ? index : index % cardIcons.length;
-            return (
-              <div
-                className="media_tech_level_two_heading_card_child"
-                key={index}
-                id={"`${index}`"}
-              >
-                <img src={cardIcons[i]} alt="cardIcons" />
-                <h2>{card.heading}</h2>
-                <p>{card.text}</p>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+      <Cards cardsHeadings={cardsHeadings} cardsContent={cardsContent} />
       <div className="media_tech_level_three">
         <h2>
           Innovate to <span>excite</span>
@@ -360,122 +282,9 @@ Nulla pellentesque viverra mi risus. Quisque urna tortor nisi facilisi maecenas.
           </section>
         </div>
       </div>
-      <div className="media_tech_level_five">
-        <h2>Capabilities</h2>
-        <p>
-          {" "}
-          in ornare feugiat sit tristique nibh. Neque sit ac lacinia eu. Neque
-          consectetur enim placerat duis phasellus. Facilisis mauris nulla mi
-          placerat. Magnis interdum nisl felis fames velit odio. Scelerisque
-          commodo nulla vitae neque sit aliquam at commodo eu.{" "}
-        </p>
-        <div className="media_tech_level_five_sliding_info">
-          <AliceCarousel
-            autoPlayStrategy="none"
-            animationDuration={500}
-            animationType="fadeout"
-            infinite
-            touchTracking={false}
-            disableDotsControls
-            buttonsDisabled
-            nextButton={<img src={right} alt="right_button" />}
-            items={items}
-            responsive={responsive}
-            mouseTracking
-            // paddingLeft={50}
-            // paddingRight={50}
-            controlsStrategy="alternate"
-          />
-          <Modal isOpen={modalIsOpen}>
-            <div className="consulting_modal_body">
-              <img src={modalData.image} alt="image" />
-              <img src={remove} alt="remove" onClick={handleModalClose} />
-              <div className="consulting_modal_body_paragraph">
-                <h2>{modalData.heading}</h2>
-                <p>{modalData.text}</p>
-              </div>
-            </div>
-          </Modal>
-        </div>
-      </div>
-      <div className="media_tech_level_six">
-        <h2>Where we serve</h2>
-        <p>
-          {" "}
-          in ornare feugiat sit tristique nibh. Neque sit ac lacinia eu. Neque
-          consectetur enim placerat duis phasellus. Facilisis mauris nulla mi
-          placerat. Magnis interdum nisl felis fames velit odio. Scelerisque
-          commodo nulla vitae neque sit aliquam at commodo eu.{" "}
-        </p>
-        <div className="media_tech_level_six_card_parent">
-          {gridCards.map((element, index) => {
-            return (
-              <div id={index} className="media_tech_level_six_card_child">
-                <h2>{element.heading}</h2>
-                <p>{element.text}</p>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      <div className="media_tech_level_seven">
-        <div className="media_tech_level_seven_heading">
-          <h2>Our recruitment solution</h2>
-          <h2>made approaches</h2>
-        </div>
-        {/* <div className="hybrid_research_level_four_unordered_list">
-                    <AliceCarousel
-                        autoPlayStrategy="none"
-                        animationDuration={500}
-                        animationType="fadeout"
-                        // infinite
-                        touchTracking={false}
-                        disableDotsControls
-                        buttonsDisabled
-                        nextButton={<img src={right} alt="right_button"/>}
-                        items={listItems}
-                        responsive={responsive}
-                        mouseTracking
-                        controlsStrategy="alternate"
-                    />
-                </div> */}
-        <div className="media_tech_level_seven_sec">
-          <section>
-            <img src={image_list_sec} alt="image_list_sec" />
-          </section>
-          <section>
-            <div>
-              <h2>
-                User-Friendly<span> Survey Creation Tools</span>
-              </h2>
-              <p>
-                Feugiat egestas ut laoreet dolor lacinia eget nisi cursus.
-                Maecenas elementum commodo tortor purus. Turpis sapien laoreet
-                pharetra egestas morbi condimentum hendrerit neque. Auctor
-                tincidunt elementum eleifend adipiscing purus. Cras nunc a
-                tempor neque elit molestie malesuada diam morbi. Consequat
-                aenean mi lacinia interdum eros ipsum dignissim amet pulvinar.
-                Id ullamcorper at nisi venenatis urna nunc purus mi faucibus.
-                Vitae aliquam pulvinar amet nulla rhoncus magna.
-              </p>
-            </div>
-            <div>
-              <h3>Benefits of using Mirats Insights -</h3>
-              <ul>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur Gravida malesua egestas
-                  a egestas.
-                </li>
-                <li>Quis justo quisque purus at et Lorem purus. </li>
-                <li>
-                  Massa eget elementum nunc semper. Eu laoreet mattis nec
-                  ullamcorper nunc Semper sed .
-                </li>
-              </ul>
-            </div>
-          </section>
-        </div>
-      </div>
+      <SlidingModals slidingModalHeading={slidingModalHeading} slidingModalData={slidingModalData} />
+      <ServeCards serveCardsHeading={serveCardsHeading} serveCardsArr={serveCardsArr} />
+      <Listing content={content} image={listing2}/>
       <div className="media_tech_level_eight">
         <div className="media_tech_level_eight_heading">
           <h2>

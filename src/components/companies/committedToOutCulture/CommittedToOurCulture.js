@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import banner from "./images/Banner.png";
-import plus from "../careers/images/plus.png";
-import cross from "../careers/images/cross.png";
-import image1 from "./images/image1.png";
-import image2 from "./images/image2.png";
+import banner from "../../images/banners/committedToCulture.png";
+import plus from "../../images/images/add.png";
+import cross from "../../images/images/Remove.png";
+import image1 from "../../images/images/image1.png";
+import image2 from "../../images/images/image2.png";
 import "./committedtoOurCulture.css";
 
 const CommittedToOurCulture = () => {

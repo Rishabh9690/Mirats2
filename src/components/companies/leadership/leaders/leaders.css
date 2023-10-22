@@ -3,22 +3,18 @@ body{
     background: #EDF2F4;
 }
 .leaders_level_one{
-    /* position: relative; */
-    width: 46%;
+    width: 60%;
     display: flex;
     margin: 60px auto;
+    justify-content: space-between;
     border-radius: 52px;
     background: #FFF;
-    border: 1px solid black;
-}
-.leaders_level_one img{
-    position: relative;
 }
 .leaders_level_one_details{
-    position: absolute;
-    border: 1px solid red;
+    width: 50%;
+    margin: auto 30px;
 }
 .leaders_body p{
-    width: 46%;
-    margin: 60px auto;
+    width: 60%;
+    margin: 60px auto 0 auto;
 }

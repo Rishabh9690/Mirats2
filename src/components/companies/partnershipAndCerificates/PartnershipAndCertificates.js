@@ -1,7 +1,7 @@
 import React from "react";
-import banner from "./images/Banner.png";
-import esomar from "./images/esomar.png";
-import greenBook from "./images/greenBook.png";
+import banner from "../../images/banners/partnershipAndCertification.png";
+import esomar from "../../images/images/esomar.png";
+import greenBook from "../../images/images/greenBook.png";
 import "./partnership.css";
 
 const PartnershipAndCertificates=()=>{

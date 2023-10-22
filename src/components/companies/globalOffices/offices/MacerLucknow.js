@@ -1,12 +1,14 @@
 import React from "react";
-import banner from "./images/macerBanner.png";
-import call from "./images/call.png";
-import location from "./images/mail.png";
-import mail from "./images/mail.png";
-import MacerImg from "../global/images/MacerLucknow.png";
-import MiratsImg from "../global/images/MiratsLucknow.png";
-import left from "./images/left.png";
-import right from "./images/right.png";
+import banner from "../../../images/banners/MacerBanner.png";
+import call from "../../../images/images/call.png";
+import location from "../../../images/images/location.png";
+import mail from "../../../images/images/mail.png";
+import MacerLkw from "../../../images/images/MacerLucknow.png";
+import MiratsLkw from "../../../images/images/MiratsLucknow.png";
+import UsOffice from "../../../images/images/UsOffice.png";
+import Atomos from "../../../images/images/Atomos.png";
+import left from "../../../images/images/left.png";
+import right from "../../../images/images/right.png";
 import "./offices.css";
 
 const MacerLucknow=()=>{
@@ -47,13 +49,13 @@ const MacerLucknow=()=>{
     }]
 
     const headQuarters=[{
-        image: MacerImg,
+        image: MacerLkw,
         name: "Macer India Research and Technology ",
         address: "Services Private Limited, Lucknow, India",
         email: "Email Id - macerindia@gmail.com",
         contactNo: "Contact No. +91 78345 78345"
     },{
-        image: MiratsImg,
+        image: MiratsLkw,
         name: "Mirats Insights Private Limited,",
         address: "Lucknow, India",
         email: "Email Id - miratsinsights@gmail.com",
@@ -74,7 +76,13 @@ const MacerLucknow=()=>{
     }
     return(
         <div className="officed_body">
-            <img src={banner} alt="banner" />
+            <div className="offices_level_one">
+                <img style={{width: "90%"}} src={banner} alt="banner" />
+                <section>
+                    <p>Global Offices</p>
+                    <h2>Macer India Research and <br />Technology Services Private Limited,<br />Lucknow, India</h2>
+                </section>                
+            </div>
             <div className="offices_level_two">
                 <section>
                     <h2>Office Details</h2>

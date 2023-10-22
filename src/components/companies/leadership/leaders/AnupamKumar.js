@@ -1,16 +1,18 @@
 import React from "react";
-import image from "../images/AnupamMax.png";
+import image from "../../../images/images/AnupamSir.png";
 import "./leaders.css";
 
 const AnupamKumar = () => {
   return (
     <div className="leaders_body">
       <div className="leaders_level_one">
-        <div className="leaders_level_one_details">
+        <section className="leaders_level_one_details">
           <h2>Anupam Kumar</h2>
           <p>Chair of the Board</p>
-        </div>
-        <img src={image} alt="Image" />
+        </section>
+        <section>
+          <img src={image} alt="Image" />
+        </section>
       </div>
       <p>
         Anupam Kumar is the distinguished co-founder of Mirats Insights,

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import banner from "./images/Banner.png";
-import plus from "../careers/images/plus.png";
-import cross from "../careers/images/cross.png";
-import image1 from "./images/image1.png";
-import image2 from "./images/image2.png";
+import banner from "../../images/banners/supportingAndInvesting.png";
+import plus from "../../images/images/add.png";
+import cross from "../../images/images/Remove.png";
+import image1 from "../../images/images/client1.png";
+import image2 from "..//../images/images/image2.png";
 import "./supportingAndInvesting.css";
 
 const SupportingAndInvesting = () => {
@@ -32,11 +32,11 @@ const SupportingAndInvesting = () => {
     e.preventDefault();
     const index = Number(e.currentTarget.id);
     setListDetails({
-        heading: details[index].heading,
-        text: details[index].text,
+      heading: details[index].heading,
+      text: details[index].text,
     });
     setDefaultVisible(false);
-};
+  };
 
   return (
     <div className="supporting_investing_body">
@@ -116,33 +116,33 @@ const SupportingAndInvesting = () => {
           Caring for <span>our employees.</span>
         </h2>
         <div className="supporting_investing_level_four_sec">
-                    <section>
-                        <ol>
-                            <li tabIndex={1} id={0} onClick={handleList}>
-                                Build a community with Mirats Insights​
-                            </li>
-                            <li tabIndex={1} id={1} onClick={handleList}>
-                                Enjoy flexibility to care for you and your family
-                            </li>
-                            <li tabIndex={1} id={2} onClick={handleList}>
-                                Grow professionally and personally
-                            </li>
-                        </ol>
-                    </section>
-                    <section>
-                        {defaultVisible ? (
-                            <>
-                                <h2>{details[0].heading}</h2>
-                                <p>{details[0].text}</p>
-                            </>
-                        ) : (
-                            <>
-                                <h2>{listDetails.heading}</h2>
-                                <p>{listDetails.text}</p>
-                            </>
-                        )}
-                    </section>
-                </div>
+          <section>
+            <ol>
+              <li tabIndex={1} id={0} onClick={handleList}>
+                Build a community with Mirats Insights
+              </li>
+              <li tabIndex={1} id={1} onClick={handleList}>
+                Enjoy flexibility to care for you and your family
+              </li>
+              <li tabIndex={1} id={2} onClick={handleList}>
+                Grow professionally and personally
+              </li>
+            </ol>
+          </section>
+          <section>
+            {defaultVisible ? (
+              <>
+                <h2>{details[0].heading}</h2>
+                <p>{details[0].text}</p>
+              </>
+            ) : (
+              <>
+                <h2>{listDetails.heading}</h2>
+                <p>{listDetails.text}</p>
+              </>
+            )}
+          </section>
+        </div>
       </div>
     </div>
   );

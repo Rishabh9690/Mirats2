@@ -1,11 +1,13 @@
 import React from "react";
-import banner from "./images/miratsBanner.png";
-import call from "./images/call.png";
-import location from "./images/mail.png";
-import usOffice from "../global/images/UsOffice.png";
-import mail from "./images/mail.png";
-import left from "./images/left.png";
-import right from "./images/right.png";
+import banner from "../../../images/images/MiratsLucknow.png";
+import call from "../../../images/images/call.png";
+import location from "../../../images/images/location.png";
+import mail from "../../../images/images/mail.png";
+import left from "../../../images/images/left.png";
+import right from "../../../images/images/right.png";
+import MiratsLkw from "../../../images/images/MiratsLucknow.png";
+import UsOffice from "../../../images/images/UsOffice.png";
+import Atomos from "../../../images/images/Atomos.png";
 
 const MiratsLucknow=()=>{
 
@@ -45,7 +47,7 @@ const MiratsLucknow=()=>{
     }]
 
     const headQuarters=[{
-        image: usOffice,
+        image: UsOffice,
         name: "",
         address: "Mirats Insights LLC, Wyoming, USA",
         email: "Email Id - miratsinsights_llc@gmail.com",
@@ -63,7 +65,14 @@ const MiratsLucknow=()=>{
     }
     return (
         <div className="officed_body">
-        <img src={banner} alt="banner" />
+        {/* <img src={banner} alt="banner" /> */}
+        <div className="offices_level_one">
+                <img style={{width: "90%"}} src={banner} alt="banner" />
+                <section>
+                    <p>Global Offices</p>
+                    <h2>Mirats Insights Private Limited,<br />Lucknow, India</h2>
+                </section>                
+            </div>
         <div className="offices_level_two">
             <section>
                 <h2>Office Details</h2>

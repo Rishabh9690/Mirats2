@@ -1,169 +1,63 @@
 import React, { useEffect, useState } from "react";
-import banner_global from "../service_img/banner_global.svg";
-import hand_clock from "../service_img/hand_clock.svg";
-import star_chat from "../service_img/star_chat.svg";
-import setting from "../service_img/setting.svg";
-import globalImg1 from "../service_img/globalImg1.svg";
-import img2_diy from "../service_img/img2_diy.svg";
-import global from "../service_img/global.svg";
-import  quantative from "../service_img/quantative.svg";
-import endtoend from "../service_img/endtoend.svg";
-import onlinesurvey from "../service_img/onlinesurvey.svg";
-import diy from "../service_img/diy.svg";
-import left from "../service_img/left.svg";
-import right from "../service_img/right.svg";
-import list_left from "../service_img/list_left.svg";
-import list_right from "../service_img/list_right.svg";
-import Slider from "react-slick";
-// import plus from "../service_img/plus.svg";
+import banner from "../../images/banners/globalSample.png";
+import globalImg from "../../images/images/globalImg.png";
+import listingImg2 from "../../images/images/listingImg2.png";
+import Cards from "../../cards/Cards.js";
+import Listing from "../../listing/Listing.js";
+import globalSurveyImg from "../../images/images/globalSurveyImg.png";
+import globalQunatativeSurveyImg from "../../images/images/globalQunatativeSurveyImg.png";
+import endToEndSurveyImg from "../../images/images/endToEndSurveyImg.png";
+import onlineSurveyImg from "../../images/images/onlineSurveyImg.png";
+import SlidingShow from "../../slidings/SlidingShow.js";
 import './globalsurvey.css';
-import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
 
 const GlobalSurvey=()=>{
-    const [iconImage, setIconImage]=  useState([]);
-    const [cards, setCards] = useState([]);
-    const [slidingSurvey, setSlidingSurvey] = useState([]);
 
-    useEffect(()=>{
-        setIconImage([hand_clock, star_chat, setting]);
-        setSlidingSurvey([{
-            Image: quantative,
-            title: "Global Quantitative Fieldwork"
-        },{
-            Image: endtoend,
-            title: "End to End Sample Surveys"
-        },{
-            Image: onlinesurvey,
-            title: "Online Surveys"
-        }]);
-        setCards([{
-            heading: "Lorem ipsum dolor sit im, amet",
-            text: "mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus.Urna eget bibendum feugiat congue sed. Consectetur at a enim dictum tempus. Aliquet eget lorem duis scelerisque ipsum mauris augue et. Faucibus quis venenatis ultricies dignissim tincidunt sit nulla. Consequat condimentum enim bibendum dictum. Faucibus quis venenatis"
-        },{
-            heading: "dolor sit im, amet Lorem ipsum.",
-            text: " in ornare feugiat sit tristique nibh. Neque sit ac lacinia eu. Neque consectetur enim placerat duis phasellus. Facilisis mauris nulla mi placerat. Magnis interdum nisl felis fames velit odio. Scelerisque commodo nulla vitae neque sit aliquam at commodo eu. Maecenas proin nulla mauris sit dui faucibus at vestibulum. Consequat pellentesque tincidunt neque cursus hac. Consequat condimentum enim bibendum dictum."
-        },{
-            heading: "Psum dolor sit im, amet Lorem ",
-            text: "proin nulla mauris sit dui faucibus at vestibulum. Consequat pellentesque tincidunt neque cursus hac. In vel neque blandit amet nunc urna duis. Consequat nulla feugiat lectus amet turpis sed. Proin iaculis feugiat massa risus amet nulla. Elementum mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus."
-        }]);
-    }, []);
+    const cardsHeadings=[{
+        heading1: "The role of the global sample in ",
+        heading2: "modern-day applications",
+    }]
 
-    const left_controll=()=>{
-        console.log("Left button clicked")
-    }
-    const right_controll=()=>{
-        console.log("Right button clicked")
-    }
+    const cardsContent=[{
+        cardHeading:"Cross-Cultural Analysis",  
+        cardText: "Global sampling allows for a comparison of data across different countries and cultures. This is especially important in today's globalized world where businesses operate in diverse markets. It enables companies to understand cultural differences, adapt their offerings accordingly, and effectively target their marketing efforts.", 
+    },{
+        cardHeading:"Generalizability of Findings",
+        cardText: "By collecting data from a global sample, researchers can make their findings more generalizable. If a product, concept, or theory works in multiple geographical and cultural contexts, it's likely to be more universally applicable. This is particularly important in fields like psychology and sociology, where understanding universal human behaviors and traits is a key objective."
+    },{
+        cardHeading: "Understanding Global Trends",
+        cardText: "Global sampling can provide insights into global trends and phenomena. For instance, in public health, global sampling is often used to track the spread of diseases or to understand health behaviors across different countries. In business, it can help identify global consumer trends or market opportunities."
+    }]
 
-    const reDirectToSurveys=(e)=>{
-        e.preventDefault();
-        console.log("Sliding image was clicked");
-        console.log("Element title===>", e.currentTarget.id);
-        if(Number(e.currentTarget.id)===0) window.location.replace('/services/globalqunatitativesurveys');
-        else if (Number(e.currentTarget.id)===1) window.location.replace('/services/endtoendsurveys');
-        else if (Number(e.currentTarget.id)===2) window.location.replace('/services/onlinesurveys');
-    }
+    const content=[{
+        heading1: "Our online survey ",
+        heading2: "made approaches",
+        lists: ["Innovative Data Collection Technologies", "Advance Sampling Technologies", "Customised Survey Design", "Comprehensive Data Analysis"],
+        sectionHeading1: "Innovative ",
+        sectionHeading2: "Data Collection Technologiess",
+        sectionText: "Mirats Insights is a forerunner in implementing innovative data collection technologies in our online surveys. We harness the power of advanced technologies, from AI-enhanced analytics to real-time data gathering methods, to ensure we capture diverse and thorough insights for our clients. Our tech-driven approach to data collection equips us with versatility and efficiency, making our market research services stand out in the industry.",
+        sectionListHeading: "Benefits of using Mirats Insights -",
+        sectionListPoints: ["Data Reliability and Precision: Our advanced data collection technologies ensure the collection of high-quality, trustworthy data.", "Scalability: The innovative technologies we use allow for scalability, meaning we can handle projects of any size or complexity effectively."],
+    }]
 
-    const responsive = {
-        0: { items: 1 },
-        568: { items: 2 },
-        1024: { items: 3 },
-    };
-
-    const items = [
-        <div className="item" data-value="1" onClick={()=>{
-            window.location.replace("/services/onlinesurveys");
-        }}>
-            <img src={onlinesurvey} alt="online_surveuy" />
-            <p>Online Surveys</p>
-        </div>,
-        <div className="item" data-value="2" onClick={()=>{
-            window.location.replace("/services/diysurveys");
-        }}>
-            <img src={diy} alt="DIY" />
-            <p>DIY Surveys</p>
-        </div>,
-        <div className="item" data-value="3" onClick={()=>{
-            window.location.replace("/services/globalsurveys");
-        }}>
-            <img src={global} alt="global" />
-            <p>Global Sample</p>
-        </div>,
-        <div className="item" data-value="4" onClick={()=>{
-            window.location.replace("/services/endtoendsurveys");
-        }}>
-            <img src={endtoend} alt="endtoend" />
-            <p>End to End Surveys</p>
-        </div>,
-        <div className="item" data-value="5" onClick={()=>{
-            window.location.replace("/services/globalqunatitativesurveys");
-        }}>
-            <img src={quantative} alt="quantitative" />
-            <p>Global Quantitative Sample</p>
-        </div>,
-    ];
-    
-    const sliding_list=()=>{
-        const settings_list = {
-            dots: false,
-            infinite: false,
-            speed: 500,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            nextArrow: <img src={list_right} />,
-            prevArrow: <img src={list_left} />,
-        };
-
-        return (
-            <>
-                <ul className="global_level_five_unordered_list" >
-                    <Slider {...settings_list}>
-                        <div className="endtoend_level_three_unordered_list_item">
-                            <li>Innovative Data Collection Technologies</li>
-                        </div>
-                        <div className="endtoend_level_three_unordered_list_item">
-                            <li>Advance Sampling Technologies</li>
-                        </div>
-                        <div className="endtoend_level_three_unordered_list_item">
-                            <li>Customised Survey Design</li>
-                        </div>
-                        <div className="endtoend_level_three_unordered_list_item">
-                            <li>Comprehensive Data Analysis</li>
-                        </div>
-                        <div className="endtoend_level_three_unordered_list_item">
-                            <li>Actionable Reporting & Visualisation</li>
-                        </div>
-                    </Slider>
-                </ul>
-            </>
-        )
-    }
+    const slidingHeading=["Your favourite upcoming", " quantitative solution "];
+    const slidingSurveys=[{
+        image: globalSurveyImg,
+        text: "Global Sample"
+    },{
+        image: globalQunatativeSurveyImg,
+        text: "Global Qunatitative Fieldwork"
+    },{
+        image: endToEndSurveyImg,
+        text: "End to End Sample Surveys"
+    },{
+        image: onlineSurveyImg,
+        text: "online Surveys"
+    }];
     return (
         <div className="global_main_body">
-            <img src={banner_global} alt="banner_image" />
-            <div className="global_level_two">
-                <div className="gloabl_heading">
-                    <h1>The role of the global sample in</h1>
-                    <h1> modern-day applications</h1>
-                </div>
-                <div className="global_cards">
-                    <div className="global_card_parent">
-                        {
-                            cards.map((card, index)=>{
-                                let i= index<= iconImage.length-1 ? index: index%iconImage.length;
-                                return(
-                                    <div className="cards" key={index} id='`${index}`' >
-                                        <img src={iconImage[i]} alt="icon_image" />
-                                        <h1>{card.heading}</h1>
-                                        <p>{card.text}</p>
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
-                </div>
-            </div>
+            <img src={banner} alt="banner_image" />
+            <Cards cardsHeadings={cardsHeadings} cardsContent={cardsContent} />
             <div  className="global_level_three">
                 <div className="global_level_three_heading">
                     <h1>The only survey platform you'll ever</h1>
@@ -171,79 +65,31 @@ const GlobalSurvey=()=>{
                 </div>
                 <div className="global_level_three_content">
                     <section>
-                        <h1>Tune is to every word, on every channel</h1>
-                        <p>mus cras dignissim et lacinia sit maecenas. Amet egestas viverra sit vestibulum risus eget velit ut elementum. Nisl molestie facilisis non vivamus. Urna eget bibendum feugiat congue sed. Consectetur at a enim dictum tempus. Aliquet eget lorem duis scelerisque ipsum mauris augue et. Faucibus quis venenatis ultricies dignissim tincidunt sit nulla. Consequat condimentum enim bibendum dictum. Faucibus quis venenatis </p>
+                        <h1>Experience the power of comprehensive insights with Mirats Insights</h1>
+                        <p>Mirats Insights is a comprehensive survey platform that streamlines survey design, distribution, and analysis, while offering access to global respondents. Its intuitive, user-friendly platform and robust analysis tools allow swift comprehension and action on collected data. Mirats Insights goes beyond typical survey tools by providing actionable, global insights for your business growth.</p>
                     </section>
                     <section>
-                        <p>Tune in to every word, on every channel</p>
                         <ul className="global_unordered_list">
-                            <li>Proin nulla mauris sit dui faucibus at vestibulum.Consequat</li>
-                            <li>Amet egestas viverra sit vestibulum risus eget</li>
-                            <li>Consectetur at a enim distum tempus</li>
-                            <li>Eget lorem duis scelerisque ipsum mauris augue</li>
+                            <li>Autonomy: Take charge of your research projects without being bound by third-party timelines or processes.</li>
+                            <li>Cost Efficiency: By managing research in-house, significant savings can be made, ensuring better ROI.</li>
+                            <li>Data Security: Mirats Insights upholds stringent data protection standards, ensuring that all your research data remains safe and confidential.</li>
+                            <li>Continuous Updates: Benefit from regular platform updates, bringing in new features, templates, and tools to enhance your DIY research journey.</li>
                         </ul>
                     </section>
                 </div>
             </div>
             <div className="global_level_four">
                 <div className="global_level_four_left">
-                    {/* <div className="global_level_four_left_heading"> */}
                         <h1>We're experts, so you</h1>
                         <h1>don't have to be</h1>
-                        <p>Feugiat egestas ut laoreet dolor lacinia eget nisi cursus. Maecenas elementum commodo tortor purus. Turpis sapien laoreet pharetra egestas morbi condimentum hendrerit neque. Auctor tincidunt elementum eleifend adipiscing purus. Cras nunc a tempor neque elit molestie malesuada diam morbi. Consequat aenean mi lacinia interdum eros ipsum dignissim amet pulvinar. Id ullamcorper at nisi venenatis urna nunc purus mi faucibus. Vitae aliquam pulvinar amet nulla rhoncus magna.</p>
-                    {/* </div> */}
+                        <p>Rely on the expertise of Mirats Insights, so you don't have to shoulder the burden of becoming a survey expert yourself. Our team consists of seasoned professionals skilled in crafting, distributing, and analyzing surveys, enabling you to focus on what you do best - managing your business. From our user-friendly platform to our sophisticated analytical tools, we take care of the complexities, providing you with clear, actionable insights. We navigate the intricacies of global sampling, ensuring you have access to a broad respondent base for a more comprehensive understanding of your market. With Mirats Insights, you're not just leveraging a survey platform - you're partnering with experts committed to your success.</p>
                 </div>
                 <div className="global_level_four_right">
-                    <img src={globalImg1} alt="globalImg1" />
+                    <img src={globalImg} alt="globalImg1" />
                 </div>
             </div>
-            <div className="global_level_five">
-                <div className="global_level_five_heading">
-                    <p>Our global sample <span>made approaches</span></p>
-                </div>
-                <div className="global_level_five_sliding_list_parent">
-                    {sliding_list()}
-                </div>
-                <div className="global_level_five_sections">
-                    <section>
-                        <img src={img2_diy} alt="image_2" />
-                    </section>
-                    <section className="text_global_level_five_section_right">
-                        <div className="text_heading_global_level_five_right_top">
-                            <p>User-Friendly<span> Survey Creation Tools</span></p>
-                            <p>Feugiat egestas ut laoreet dolor lacinia eget nisi cursus. Maecenas elementum commodo tortor purus. Turpis sapien laoreet pharetra egestas morbi condimentum hendrerit neque. Auctor tincidunt elementum eleifend adipiscing purus. Cras nunc a tempor neque elit molestie malesuada diam morbi. Consequat aenean mi lacinia interdum eros ipsum dignissim amet pulvinar. Id ullamcorper at nisi venenatis urna nunc purus mi faucibus. Vitae aliquam pulvinar amet nulla rhoncus magna.</p>
-                        </div>
-                        <div className="listed_global_level_five_right_bottom">
-                            <p>Benefits of using Mirats Insights -</p>
-                            <ul className="listed_unordered_global_level_five_right">
-                                <li>Lorem ipsum dolor sit amet consectetur Gravida malesua egestas a egestas.</li>
-                                <li>Quis justo quisque purus at et Lorem  purus.</li>
-                                <li>Massa eget elementum nunc semper. Eu laoreet mattis nec ullamcorper nunc Semper sed .</li>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <div className="global_level_six">
-                <p>Upcoming Surveys</p>
-                <h1>Your favourite upcoming </h1>
-                <h2>quantitative solution </h2>
-                    <div className="global_level_six_survey_parent">
-                    <AliceCarousel
-                        autoPlayStrategy="none"
-                        animationDuration={700}
-                        animationType="fadeout"
-                        infinite
-                        touchTracking={false}
-                        disableDotsControls
-                        buttonsDisabled
-                        items={items}
-                        responsive={responsive}
-                        mouseTracking
-                        controlsStrategy="alternate"
-                    />
-                    </div>
-            </div>
+            <Listing content={content} image={listingImg2} />
+            <SlidingShow slidingHeading={slidingHeading} slidingSurveys={slidingSurveys}/>
         </div>
     )
 }
