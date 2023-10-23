@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 import image from "../../../images/images/AnupamSir.png";
 import "./leaders.css";

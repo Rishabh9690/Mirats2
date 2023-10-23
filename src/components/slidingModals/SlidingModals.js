@@ -1,5 +1,5 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState } from "react";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import remove from "../images/images/Remove.png";
 import right from "../images/images/right.png";
@@ -15,16 +15,6 @@ const SlidingModals = (props) => {
     const slidingModalHeading = props.slidingModalHeading;
     const slidingModalData = props.slidingModalData;
 
-    const responsiveList = {
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 1
-        }
-    };
 
     const handleModal = (e) => {
         e.preventDefault();

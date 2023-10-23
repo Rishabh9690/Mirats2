@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 import banner from  "../../../images/banners/atomos.png";
 import call from "../../../images/images/call.png";
@@ -5,8 +6,8 @@ import location from "../../../images/images/location.png";
 import mail from "../../../images/images/mail.png";
 import MacerImg from "../../../images/images/MacerLucknow.png";
 import MiratsImg from "../../../images/images/MiratsLucknow.png";
-import UsOffice from "../../../images/images/UsOffice.png";
-import Atomos from "../../../images/images/Atomos.png";
+// import UsOffice from "../../../images/images/UsOffice.png";
+// import Atomos from "../../../images/images/Atomos.png";
 import left from "../../../images/images/left.png";
 import right from "../../../images/images/right.png";
 const AtomosOffice=()=>{

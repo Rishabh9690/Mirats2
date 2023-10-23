@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 import miratsImg from "../../../components/images/images/miratsImg.png";
 import facebookIcon from "../../../components/images/images/facebook.png";

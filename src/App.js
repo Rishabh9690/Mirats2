@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-pascal-case */
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import {Routes, Route, Link} from "react-router-dom";

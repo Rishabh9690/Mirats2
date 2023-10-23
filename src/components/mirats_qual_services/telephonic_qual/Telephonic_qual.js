@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from "react";
 import banner from "../../images/banners//telephonicQual.png";
 import Cards from "../../cards/Cards.js";

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import miratsLogo from "../headerImgs/miratsLogo.jpg";
-import sample from "../headerImgs/sample.png";
 import { useNavigate } from "react-router-dom";
 import Modal from 'react-modal';
 import "./headers.css";
@@ -74,82 +73,83 @@ const Header = () => {
         const id = e.currentTarget.id;
         console.log("Id", id);
         if (type === "services") {
-            if (id == 0) {
+            if (id === '0') {
                 setSubDivisions(["Online Surveys", "DIY Surveys", "Global Sample Surveys", "Global Quantitative Fieldwork", "End to End Sample Service"]);
             }
-            else if (id == 1) {
+            else if (id === '1') {
+                console.log("Here----")
                 setSubDivisions(["In-Person Qual", "Digital Qual", "Telephonic Qual", "Global Qual Solution"]);
             }
-            else if (id == 2) {
+            else if (id === '2') {
                 setSubDivisions(["Recruitment Solution", "Consulting Solution", "Hybrid Research Solution", "Product Test", "Transcription Services"]);
             }
             setSubType(divisions[id]);
         }
         if (type === "industry") {
-            if (id == 0) {
+            if (id === '0') {
                 setSubDivisions(["B2C Audience Panel Book", "B2C Audience Panel Book", "B2C Audience Panel Book"]);
             }
-            else if (id == 1) {
+            else if (id === '1') {
                 setSubDivisions(["B2C Audience Panel Book", "B2C Audience Panel Book", "B2C Audience Panel Book"]);
             }
-            else if (id == 2) {
+            else if (id === '2') {
                 setSubDivisions(["B2C Audience Panel Book", "B2C Audience Panel Book", "B2C Audience Panel Book"]);
             }
-            else if (id == 3) {
+            else if (id === '3') {
                 setSubDivisions(["B2C Audience Panel Book", "B2C Audience Panel Book", "B2C Audience Panel Book"]);
             }
-            else if (id == 4) {
+            else if (id === '4') {
                 setSubDivisions(["B2C Audience Panel Book", "B2C Audience Panel Book", "B2C Audience Panel Book"]);
             }
-            else if (id == 5) {
+            else if (id === '5') {
                 setSubDivisions(["B2C Audience Panel Book", "B2C Audience Panel Book", "B2C Audience Panel Book"]);
             }
             setSubType(divisions[id]);
         }
         if (type === "company") {
-            if (id == 0) {
+            if (id === '0') {
                 setSubDivisions(["We’re Hiring", "We’re Hiring", "Blogs and Articles"]);
             }
-            else if (id == 1) {
+            else if (id === '1') {
                 setSubDivisions(["We’re Hiring", "We’re Hiring", "Blogs and Articles"]);
             }
-            else if (id == 2) {
+            else if (id === '2') {
                 setSubDivisions(["We’re Hiring", "We’re Hiring", "Blogs and Articles"]);
             }
-            else if (id == 3) {
+            else if (id === '3') {
                 setSubDivisions(["We’re Hiring", "We’re Hiring", "Blogs and Articles"]);
             }
-            else if (id == 4) {
+            else if (id === '4') {
                 setSubDivisions(["We’re Hiring", "We’re Hiring", "Blogs and Articles"]);
             }
-            else if (id == 5) {
+            else if (id === '5') {
                 setSubDivisions(["We’re Hiring", "We’re Hiring", "Blogs and Articles"]);
             }
-            else if (id == 6) {
+            else if (id === '6') {
                 setSubDivisions(["We’re Hiring", "We’re Hiring", "Blogs and Articles"]);
             }
             setSubType(divisions[id]);
         }
         if (type === "resources") {
-            if (id == 0) {
+            if (id === '0') {
                 setSubDivisions(["", ""]);
             }
-            else if (id == 1) {
+            else if (id === '1') {
                 setSubDivisions(["", ""]);
             }
-            else if (id == 2) {
+            else if (id === '2') {
                 setSubDivisions(["", ""]);
             }
-            else if (id == 3) {
+            else if (id === '3') {
                 setSubDivisions(["", ""]);
             }
-            else if (id == 4) {
+            else if (id === '4') {
                 setSubDivisions(["", ""]);
             }
-            else if (id == 5) {
+            else if (id === '5') {
                 setSubDivisions(["", ""]);
             }
-            else if (id == 6) {
+            else if (id === '6') {
                 setSubDivisions(["", ""]);
             }
             setSubType(divisions[id]);
@@ -158,66 +158,68 @@ const Header = () => {
 
     const handleNavigations = (e) => {
         e.preventDefault();
-        console.log("Clicked");
         const id= e.currentTarget.id;
-        if (type === "services" && subType=="Qualitative Solution") {
-            if (subDivisions[id]=="Online Surveys") {
+        console.log("Clicked", id);
+        if (type === "services" && subType==="Qualitative Solution") {
+            if (subDivisions[id]==="Online Surveys") {
                 handleModalClose();
                 navigate("/services/onlinesurveys")
             }
-            else if (subDivisions[id]=="DIY Surveys") {
+            else if (subDivisions[id]==="DIY Surveys") {
                 handleModalClose();
                 navigate("/services/diysurveys")
             }
-            else if (subDivisions[id]=="Global Sample Surveys") {
+            else if (subDivisions[id]==="Global Sample Surveys") {
                 handleModalClose();
                 navigate("/services/globalsurveys")
             }
-            else if (subDivisions[id]=="Global Quantitative Fieldwork") {
+            else if (subDivisions[id]==="Global Quantitative Fieldwork") {
                 handleModalClose();
                 navigate("/services/globalqunatitativesurveys")
             }
-            else if (subDivisions[id]=="End to End Sample Service") {
+            else if (subDivisions[id]==="End to End Sample Service") {
                 handleModalClose();
                 navigate("/services/endtoendsurveys")
             }
         }
-        if (type === "services" && subType=="Quantitive Solution") {
-            if (subDivisions[id]=="In-Person Qual") {
+        if (type === "services" && subType==="Quantitive Solution") {
+            console.log("Here outside")
+            if (subDivisions[id]==="In-Person Qual") {
+                console.log("Here")
                 handleModalClose();
                 navigate("/services/inpersonalqual")
             }
-            else if (subDivisions[id]=="Digital Qual") {
+            else if (subDivisions[id]==="Digital Qual") {
                 handleModalClose();
                 navigate("/services/digitalqual")
             }
-            else if (subDivisions[id]=="Telephonic Qual") {
+            else if (subDivisions[id]==="Telephonic Qual") {
                 handleModalClose();
                 navigate("/services/telephonicqual")
             }
-            else if (subDivisions[id]=="Global Qual Solution") {
+            else if (subDivisions[id]==="Global Qual Solution") {
                 handleModalClose();
                 navigate("/services/globalqual")
             }
         }
-        if (type === "services" && subType=="Specialist Solution") {
-            if (subDivisions[id]=="Recruitment Solution") {
+        if (type === "services" && subType==="Specialist Solution") {
+            if (subDivisions[id]==="Recruitment Solution") {
                 handleModalClose();
                 navigate("/services/recruitmentservice")
             }
-            else if (subDivisions[id]=="Consulting Solution") {
+            else if (subDivisions[id]==="Consulting Solution") {
                 handleModalClose();
                 navigate("/services/consultingservice")
             }
-            else if (subDivisions[id]=="Hybrid Research Solution") {
+            else if (subDivisions[id]==="Hybrid Research Solution") {
                 handleModalClose();
                 navigate("/services/hybridresearchservice")
             }
-            else if (subDivisions[id]=="Product Test") {
+            else if (subDivisions[id]==="Product Test") {
                 handleModalClose();
                 navigate("/services/producttestservice")
             }
-            else if (subDivisions[id]=="Transcription Services") {
+            else if (subDivisions[id]==="Transcription Services") {
                 handleModalClose();
                 navigate("/services/transcriptionservice")
             }
