@@ -153,8 +153,9 @@ const Header = () => {
                 setSubDivisions(["", ""]);
             }
             setSubType(divisions[id]);
-        }
+        }   
     }
+    //for git Update
 
     const handleNavigations = (e) => {
         e.preventDefault();
